@@ -1,7 +1,7 @@
  <!DOCTYPE html>
 <html>
 <head>
-<title>Hello World!</title>
+<title>Some other Title</title>
 <link rel="stylesheet" href="bluestyle.css">
 </head>
 <body>
