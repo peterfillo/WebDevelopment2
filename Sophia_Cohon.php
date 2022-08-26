@@ -26,7 +26,7 @@
     </script>
 </head>
 <body>
-    <h1 id="first">Hello World! Welcome to my <i>simple website.</i> </h1>
+    <h1 id="first">Hello World! Added something !!!!  Welcome to my <i>simple website.</i> </h1>
     <button type="button" onclick="myFunction()" id="magic">Click me</button>
     <br>
     <br>
