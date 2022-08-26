@@ -29,6 +29,7 @@
     <h1 id="first">Hello World! Added something !!!!  Welcome to my <i>simple website.</i> </h1>
     <button type="button" onclick="myFunction()" id="magic">Click me</button>
     <br>
+	Hello Sophia!
     <br>
     <?php 
     echo "This is a code in PHP. Hello World!";
