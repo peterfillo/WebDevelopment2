@@ -16,11 +16,7 @@
 				alert ( "HELLO WORLD! w/ js");
 			}
 		</script>
-		
-		<!--PHP-->
-		<?php
-			include("hello.php");
-		?>
+
 	</body>
 	
 </html>
