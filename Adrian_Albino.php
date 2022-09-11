@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width", intial-scale=1">
-		<title>Simple Webpage: Task 1 Revision</title>
+		<title>Git Task</title>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 		<style>
 			html {
@@ -30,15 +30,15 @@
 		</style>
 		<script>
 			function myRevision() {
-				alert("This is my revision to practice HTML, CSS and JavaScript.");
+				alert("Git is free and open source software for distributed version control: tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development.");
 			}
 		</script>
 	</head>
 	<body>
 		<section class="text">
-			<h2>Simple Webpage!</h2>
-			<p>This is Task 1 - Revision.</p>
+			<h2>Git</h2>
+			<p>This is the Git Task.</p>
 		</section>
-		<center><button class="learnmore" onclick ="myRevision()">What is this?</button></center>
+		<center><button class="learnmore" onclick ="myRevision()">What is Git?</button></center>
 	</body>
 </html>
