@@ -1,5 +1,20 @@
 <?php
 echo "prank em johnscript ";
+$target_dir = "MAPAuploads.php";
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$uploadOk = 1;
+$imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+// Check if image file is a actual image or fake image
+if(isset($_POST["submit"])) {
+  $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+  if($check !== false) {
+    echo "File is an image - " . $check["mime"] . ".";
+    $uploadOk = 1;
+  } else {
+    echo "File is not an image.";
+    $uploadOk = 0;
+  }
+}
 ?>
 
 <!DOCTYPE html>
@@ -84,7 +99,11 @@ echo "prank em johnscript ";
     src="https://www.youtube.com/embed/IVRlYIjKy0A">
     </iframe> 
         </center>
+<form action="MAPAupload.php" method="POST" enctype="multipart/form-data" >
+    <input type="file" name="file">
+    <button type="submit" name="submit">Upload Image</button>
 
+</form>
 
 </body>
 </html>
