@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style >
+body{
+	padding: 12;
+	box-sizing: border-box;
+}
+div {
+
+	border-top: 4px solid black;
+	border-bottom: 4px solid black;
+}
+
+
+</style>
+<title>Conversion</title>
+
+</head>
+
+<body>
+
+
+<div>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Fahrenheit" oninput="CelsiusToFarenheit(this.value)" onchange="CelsiusToFarenheit(this.value)">
+<p>Celcius: <span id="outputCelcius"></span></p>
+</div>
+
+<div>
+	<label>Celcius</label>
+	<input id="inputFahrenheit" type="number" placeholder="Celcius" oninput="FarenheitToCelsius(this.value)" onchange="FarenheitToCelsius(this.value)"
+	<p>Farenheit: <span id="outputFarenheit"></span></p>
+</div>
+
+<div>
+	<label>Inches</label>
+	<input id="inches" type="number" placeholder="Inches" oninput="InchesToCentimeters(this.value)" onchange="InchesToCentimeters(this.value)"
+	<p>Centimeters: <span id="outputcm"></span></p>
+</div>
+
+<div>
+	<label>Centimeters</label>
+	<input id="Centimeter" type="number" placeholder="Centimeters" oninput="ICentimetersToInches(this.value)" onchange="CentimetersToInches(this.value)"
+	<p>Inches: <span id="outputinches"></span></p>
+</div>
+<div>
+	<label>Feet</label>
+	<input id="Feet" type="number" placeholder="Feet" oninput="FeetToMeters(this.value)" onchange="FeetToMeters(this.value)"
+	<p>Meters: <span id="outputmeters"></span></p>
+</div>
+<div>
+	<label>Meters</label>
+	<input id="Meters" type="number" placeholder="Meters" oninput="MetersToFeet(this.value)" onchange="MetersToFeet(this.value)"
+	<p>Feet: <span id="outputfeet"></span></p>
+</div>
+
+<div>
+	<label>Kilograms</label>
+	<input id="Kilograms" type="number" placeholder="Kilograms" oninput="KilogramsToPounds(this.value)" onchange="KilogramsToPounds(this.value)"
+	<p>Pounds: <span id="outputpounds"></span></p>
+</div>
+<div>
+	<label>Pounds</label>
+	<input id="Pounds" type="number" placeholder="Pounds" oninput=" PoundsToKilogram(this.value)" onchange=" PoundsToKilogram(this.value)"
+	<p>KiloGrams: <span id="outputkilograms"></span></p>
+</div>
+
+<div>
+	<label>Philippines Peso</label>
+	<input id="PHP" type="number" placeholder="PHP" oninput=" PHPtoUSD(this.value)" onchange=" PHPtoUSD(this.value)"
+	<p>USD: <span id="outputusd"></span></p>
+</div>
+<div>
+	<label>US dollars</label>
+	<input id="USD" type="number" placeholder="USD" oninput=" USDtoPHP(this.value)" onchange=" USDtoPHP(this.value)"
+	<p>Philippine peso: <span id="outputphp"></span></p>
+</div>
+
+
+
+
+
+
+
+
+<script>
+function CelsiusToFarenheit(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+}
+function FarenheitToCelsius(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputFarenheit").innerHTML=(valNum*1.8)+32;
+}
+
+function InchesToCentimeters(valNum){
+	valNum = parseFloat(valNum);
+  document.getElementById("outputcm").innerHTML=(valNum)/0.39370;
+		
+}
+	function CentimetersToInches(valNum){
+	valNum = parseFloat(valNum);
+  document.getElementById("outputinches").innerHTML=(valNum)*0.39370;
+		
+}
+function FeetToMeters(valNum){
+	valNum = parseFloat(valNum);
+  document.getElementById("outputmeters").innerHTML=(valNum)/3.2808;
+		
+}
+function MetersToFeet(valNum){
+	valNum = parseFloat(valNum);
+  document.getElementById("outputfeet").innerHTML=(valNum)*3.2808;
+		
+}
+function KilogramsToPounds(valNum){
+	valNum = parseFloat(valNum);
+  document.getElementById("outputpounds").innerHTML=(valNum)*2.2046;
+		
+}
+function PoundsToKilogram(valNum){
+	valNum = parseFloat(valNum);
+  document.getElementById("outputkilograms").innerHTML=(valNum)*2.2046;
+		
+}
+function PoundsToKilogram(valNum){
+	valNum = parseFloat(valNum);
+  document.getElementById("outputkilograms").innerHTML=(valNum)/2.2046;
+		
+}
+function PHPtoUSD(valNum){
+	valNum = parseFloat(valNum);
+  document.getElementById("outputusd").innerHTML=(valNum)*0.017;
+		
+}
+function USDtoPHP(valNum){
+	valNum = parseFloat(valNum);
+  document.getElementById("outputphp").innerHTML=(valNum)*57.32;
+		
+}
+
+</script>
+
+
+</body>
+</html>
