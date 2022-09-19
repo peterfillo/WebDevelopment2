@@ -41,7 +41,7 @@
 				<h2>Kilograms</h2>
 				<textarea id="kg" placeholder = "KILOGRAM" onchange="converter('pounds', 'kg')"></textarea>
 				<h2>Philippine Pesos</h2>
-				<textarea id="php" placeholder = "PHILIPPINE PESOS" onchange="converter('dollars', 'php')"></textarea>
+				<textarea id="php" onchange="converter('dollars', 'php')" placeholder = "PHILIPPINE PESOS"></textarea>
 			</div>
 			<div class="right">
 				<h2>Farenheit</h2>
@@ -53,15 +53,15 @@
 				<h2>Pounds</h2>
 				<textarea id="pounds" placeholder = "POUNDS" onchange="converter('kg', 'pounds')"></textarea>
 				<h2>US Dollars</h2>
-				<textarea id="dollars" placeholder = "US DOLLARS" onchange="converter('php', 'dollars')"></textarea>
+				<textarea id="dollars" onchange="converter('php', 'dollars')" placeholder = "US DOLLARS"></textarea>
 			</div>
 		</div>
 	</div>
 	
 <script type="text/javascript">
 	function converter(output, inp){
-		var output = document.getElementbyId(output);
-		var input = document.getElementbyId(inp).value;
+		var output = document.getElementById(output);
+		var input = document.getElementById(inp).value;
 		if(inp == 'celsius'){
 			output.value = 32 + input*1.8;
 		}
