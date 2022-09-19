@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Queeny Mae Escabarte - Premid </title>
+	
+	<style>
+		.left{
+			float: left;
+			background-color: grey;
+			width:30%;
+			height:800px;
+		}
+		.right{
+			float: left;
+			background: grey;
+			width:30%;
+			height:800px;
+		}
+		textarea {
+			width: 400px;
+			height: 70px;
+		}
+	</style>
+</head>
+	<div>
+
+		<div>
+			<h1>Escabarte - Converter</h1>
+		</div>
+		<div>
+		
+			<div class="left">
+				<h2>Celsius</h2>
+				<textarea id="celsius" placeholder = "CELSIUS" onchange="converter('faren', 'celsius')"></textarea>
+				<h2>Inches</h2>
+				<textarea id="inch" placeholder = "INCHES" onchange="converter('cm', 'inch')"></textarea>
+				<h2>Feet</h2>
+				<textarea id="feet" placeholder = "FEET" onchange="converter('meter', 'feet')"></textarea>
+				<h2>Kilograms</h2>
+				<textarea id="kg" placeholder = "KILOGRAM" onchange="converter('pounds', 'kg')"></textarea>
+				<h2>Philippine Pesos</h2>
+				<textarea id="php" placeholder = "PHILIPPINE PESOS" onchange="converter('dollars', 'php')"></textarea>
+			</div>
+			<div class="right">
+				<h2>Farenheit</h2>
+				<textarea id="faren" placeholder = "FARENHET" onchange="converter('celsius', 'faren')"></textarea>
+				<h2>Centimeter</h2>
+				<textarea id="cm" placeholder = "CENTIMETER" onchange="converter('inch', 'cm')"></textarea>
+				<h2>Meters</h2>
+				<textarea id="meter" placeholder = "METERS" onchange="converter('feet', 'meter')"></textarea>
+				<h2>Pounds</h2>
+				<textarea id="pounds" placeholder = "POUNDS" onchange="converter('kg', 'pounds')"></textarea>
+				<h2>US Dollars</h2>
+				<textarea id="dollars" onchange="converter('php', 'dollars')" placeholder = "US DOLLARS"></textarea>
+			</div>
+		</div>
+	</div>
+	
+<script type="text/javascript">
+	function converter(output, inp){
+		var output = document.getElementById(output);
+		var input = document.getElementById(inp).value;
+		if(inp == 'celsius'){
+			output.value = 32 + input*1.8;
+		}
+		else if(inp == 'inch'){
+			output.value = input*2.54;
+		}
+		else if(inp == 'feet'){
+			output.value = input/3.28;
+		}
+		else if(inp == 'kg'){
+			output.value = input*2.2;
+		}
+		else if(inp == "php"){
+			output.value = input*57.35;
+		}
+		else if(inp == 'faren'){
+			output.value = (input-32)*5/9;
+		}
+		else if(inp == 'cm'){
+			output.value = input/2.54;
+		}
+		else if(inp == 'meter'){
+			output.value = input*3.28;
+		}
+		else if(inp == 'pounds'){
+			output.value = input/2.2;
+		}
+		else if(inp == "dollars"){
+			output.value = input/57.29;
+		}
+	}
+</script>
+
+</html>

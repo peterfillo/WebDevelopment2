@@ -1,0 +1,275 @@
+ <!DOCTYPE html>
+
+
+ <html>
+ <head>
+ 	<title></title>
+ 	<style type="text/css">
+
+ 		.Separator{
+ 		outline: 1px solid black;
+ 		width: 50%;
+ 		padding:30px 10px 50px 50px;
+ 		
+ 		
+ 		}
+ 		.Celsius{
+ 			
+ 			
+ 		}
+ 		.Fahrenheit{
+ 			
+ 		}
+
+ 	</style>
+
+	
+
+
+
+
+
+ </head>
+ <body>
+
+ 	<div class="Separator">
+	 	<div class="Celsius">
+	 		<h1>Celsius</h1>
+	 		<form action="" method="post">
+				<input type="float" name="value" id="value">
+				<input type="submit" value="Convert to Fahrenheit" name="CtoF">
+
+				<?php
+					if (isset($_POST["CtoF"])) {
+						$valCelsius = $_POST['value'];
+						$Fahrenheit = NULL;
+						$Fahrenheit = (float)(($valCelsius * 9 / 5) + 32);
+						echo($valCelsius . " Celsius = " . $Fahrenheit . " Fahrenheit");
+					}
+				?>
+			</form>
+
+			
+	 		
+	 	</div>
+	 	<div class="Fahrenheit">
+	 		<h1>Fahrenheit</h1>
+	 		<form action="" method="post">
+				<input type="float" name="value" id="value">
+				<input type="submit" value="Convert to Celsius" name="FtoC">
+				<?php
+					if (isset($_POST["FtoC"])) {
+						$valFahrenheit = $_POST['value'];
+						$Celsius = NULL;
+						$Celsius = (float)(($valFahrenheit - 32) * 5) / 9;
+						echo($valFahrenheit . " Fahrenheit = " . $Celsius . " Celsius");
+						
+					}
+				?>
+			</form>
+	 	</div>
+	</div>
+
+
+
+	<div class="Separator">
+	 	<div class="Inches">
+	 		<h1>Inches</h1>
+	 		<form action="" method="post">
+				<input type="float" name="value" id="value">
+				<input type="submit" value="Convert to Centimeters" name="inchToCm">
+
+				<?php
+					if (isset($_POST["inchToCm"])) {
+						$Inches = $_POST['value'];
+						$Centimeters = NULL;
+						$Centimeters = (float) ($Inches * 2.54);
+						echo($Inches . " Inches = " . $Centimeters . " Centimeters");
+					}
+				?>
+			</form>
+
+			
+	 		
+	 	</div>
+	 	<div class="Centimeters">
+	 		<h1>Centimeters</h1>
+	 		<form action="" method="post">
+				<input type="float" name="value" id="value">
+				<input type="submit" value="Centimeters to Inches" name="cmToInches">
+				<?php
+					if (isset($_POST["cmToInches"])) {
+						$Cm = $_POST['value'];
+						$Inches = NULL;
+						$Inches = (float)($Cm / 2.54);
+						echo($Cm . " Centimeters = " . $Inches . " Inches");
+						
+					}
+				?>
+			</form>
+	 	</div>
+	</div>
+
+
+
+
+	<div class="Separator">
+	 	<div class="Feet">
+	 		<h1>Feet</h1>
+	 		<form action="" method="post">
+				<input type="float" name="value" id="value">
+				<input type="submit" value="Feet to Meters" name="fToMeter">
+
+				<?php
+					if (isset($_POST["fToMeter"])) {
+						$Feet = $_POST['value'];
+						$Meters = NULL;
+						$Meters = (float) ($Feet * 0.3048);
+						echo($Feet . " Feet = " . $Meters . " Meters");
+					}
+				?>
+			</form>
+
+			
+	 		
+	 	</div>
+	 	<div class="Meters">
+	 		<h1>Meters</h1>
+	 		<form action="" method="post">
+				<input type="float" name="value" id="value">
+				<input type="submit" value="Meters to Feet" name="mToFeet">
+				<?php
+					if (isset($_POST["mToFeet"])) {
+						$Meters = $_POST['value'];
+						$Feet = NULL;
+						$Feet = (float)($Meters / 0.3048);
+						echo($Meters . " Meters = " . $Feet . " Feet");
+						
+					}
+				?>
+			</form>
+	 	</div>
+	</div>
+
+
+
+	<div class="Separator">
+	 	<div class="Feet">
+	 		<h1>Feet</h1>
+	 		<form action="" method="post">
+				<input type="float" name="value" id="value">
+				<input type="submit" value="Feet to Meters" name="fToMeter">
+
+				<?php
+					if (isset($_POST["fToMeter"])) {
+						$Feet = $_POST['value'];
+						$Meters = NULL;
+						$Meters = (float) ($Feet * 0.3048);
+						echo($Feet . " Feet = " . $Meters . " Meters");
+					}
+				?>
+			</form>
+
+			
+	 		
+	 	</div>
+	 	<div class="Meters">
+	 		<h1>Meters</h1>
+	 		<form action="" method="post">
+				<input type="float" name="value" id="value">
+				<input type="submit" value="Meters to Feet" name="mToFeet">
+				<?php
+					if (isset($_POST["mToFeet"])) {
+						$Meters = $_POST['value'];
+						$Feet = NULL;
+						$Feet = (float)($Meters / 0.3048);
+						echo($Meters . " Meters = " . $Feet . " Feet");
+						
+					}
+				?>
+			</form>
+	 	</div>
+	</div>
+
+
+	<div class="Separator">
+	 	<div class="Kilograms">
+	 		<h1>Kilograms</h1>
+	 		<form action="" method="post">
+				<input type="float" name="value" id="value">
+				<input type="submit" value="Kilograms to Pounds" name="kToP">
+
+				<?php
+					if (isset($_POST["kToP"])) {
+						$Kilo = $_POST['value'];
+						$Pounds = NULL;
+						$Pounds = (float) ($Kilo * 2.20462);
+						echo($Kilo . " Kilograms = " . $Pounds . " Pounds");
+					}
+				?>
+			</form>
+
+			
+	 		
+	 	</div>
+	 	<div class="Pounds">
+	 		<h1>Pounds</h1>
+	 		<form action="" method="post">
+				<input type="float" name="value" id="value">
+				<input type="submit" value="Pounds To Kilograms" name="pToK">
+				<?php
+					if (isset($_POST["pToK"])) {
+						$Pounds = $_POST['value'];
+						$Kilo = NULL;
+						$Kilo = (float)($Pounds / 2.20462);
+						echo($Pounds . " Pounds = " . $Kilo . " Kilograms");
+						
+					}
+				?>
+			</form>
+	 	</div>
+	</div>
+
+	<div class="Separator">
+	 	<div class="PhpToUsd">
+	 		<h1>Philippine Pesos</h1>
+	 		<form action="" method="post">
+				<input type="float" name="value" id="value">
+				<input type="submit" value="PHP to USD" name="phpToUsd">
+
+				<?php
+					if (isset($_POST["phpToUsd"])) {
+						$php = $_POST['value'];
+						$USD = NULL;
+						$USD = (float) ($php * 0.017);
+						echo($php . " PHP = " . $USD . " USD");
+					}
+				?>
+			</form>
+
+			
+	 		
+	 	</div>
+	 	<div class="USD">
+	 		<h1>USD</h1>
+	 		<form action="" method="post">
+				<input type="float" name="value" id="value">
+				<input type="submit" value="USD to PHP" name="usdToPhp">
+				<?php
+					if (isset($_POST["usdToPhp"])) {
+						$USD = $_POST['value'];
+						$php = NULL;
+						$php = (float)($USD / 0.017);
+						echo($USD . " USD = " . $php . " php");
+						
+					}
+				?>
+			</form>
+	 	</div>
+	</div>
+
+
+
+ 
+ </body>
+ </html>
