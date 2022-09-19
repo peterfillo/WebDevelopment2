@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+    .main{
+      width: 100%;
+      height: 100px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      font-size: 15px;
+    }
+    
+    .conversion{
+      width: 100%;
+      height: 100px;
+      padding: 12px 20px;
+      box-sizing: border-box;
+      border: 2px solid #ccc;
+      border-radius: 4px;
+      background-color: #f8f8f8;
+      font-size: 15px;
+    }
+    
+    .mainDiv{
+        width: 100%;
+        align-items: center;
+        font-family: monospace;
+        font-size: 150%;
+    }
+
+    div{
+    text-align:center;
+    width: 40%;
+    display: inline-block;
+    }
+    </style>
+<body style="background-color: #89CFF0; color: #f8f8f8"> 
+    <h1 style="text-align:center; font-family: monospace; font-size: 300%;">Conversion</h1>
+    <form>
+        <div class="mainDiv">
+            <div>
+                <h3>Celsius</h3>
+                <input id="celsius" class="main" onchange="conversion('celsius','farenheit')" placeholder="Degree Celsius"></input>
+            </div>
+            <div>
+                <h3>Farenheit</h3>
+                <input id="farenheit" class="conversion" onchange="conversion('farenheit','celsius')" placeholder="Degree Farenheits"></input>
+            </div>
+            <div>
+                <h3>Inches</h3>
+                <input id="inch" class="main" onchange="conversion('inch','cm')" placeholder="Inches"></input>
+            </div>
+            <div>
+                <h3>Centimeters</h3>
+                <input id="cm" class="conversion" onchange="conversion('cm','inch')" placeholder="Centimeters"></input>
+            </div>
+            <div>
+                <h3>Feet</h3>
+                <input id="feet" class="main" onchange="conversion('feet','meter')" placeholder="Feet"></input>
+            </div>
+            <div>
+                <h3>Meters</h3>
+                <input id="meter" class="conversion" onchange="conversion('meter','feet')" placeholder="Meters"></input>
+            </div>
+            <div>
+                <h3>Kilograms</h3>
+                <input id="kg" class="main" onchange="conversion('kg','pounds')" placeholder="Kilograms"></input>
+            </div>
+            <div>
+                <h3>Pounds</h3>
+                <input id="pounds" class="conversion" onchange="conversion('pounds','kg')" placeholder="Pounds"></input>
+            </div>
+            <div>
+                <h3>Philippine Pesos</h3>
+                <input id="php" class="main" onchange="conversion('php','usd')" placeholder="Philippine Pesos"></input>
+            </div>
+            <div>
+                <h3>US Dollars</h3>
+                <input id="usd" class="conversion" onchange="conversion('usd','php')" placeholder="US Dollars"></input>
+            </div>
+        </div>
+    </form>
+    <br><br>
+<script>
+function conversion(source,conv){
+    var sourceValue = document.getElementById(source).value;
+    var conv = document.getElementById(conv);
+    if (isNaN(sourceValue)) return;
+    if (source == "celsius")	conv.value = sourceValue * 9 / 5 + 32;
+    else if (source == "farenheit") conv.value = (sourceValue - 32) * 5 / 9;
+    else if (source == "inch") conv.value = sourceValue * 2.54;
+    else if (source == "cm") conv.value = sourceValue / 2.54;
+    else if (source == "feet") conv.value = sourceValue * 0.3048;
+    else if (source == "meter") conv.value = sourceValue / 0.3048;
+    else if (source == "kg") conv.value = sourceValue * 2.20462262;
+    else if (source == "pounds") conv.value = sourceValue / 2.20462262;
+    else if (source == "usd") conv.value = sourceValue * 57.31;
+    else if (source == "php") conv.value = sourceValue / 57.31;
+}
+</script>
+  
+</body>
+</html>
