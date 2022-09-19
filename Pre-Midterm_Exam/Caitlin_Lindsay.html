@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coversions</title>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&family=Uchen&display=swap" rel="stylesheet">
+        <style>
+            body{
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 10%;
+                background-color: #3b3b4f;
+            }
+
+            #main{
+                border: solid 2px black;
+                border-radius: 5px;
+                text-align: center;
+                width: 50vw;
+                padding-bottom: 5%;
+                background-color: #ccccf4;
+            }
+
+            #temp{
+                display: block;
+                margin: 10px;
+            }
+
+            #ruler{
+                display: block;
+                margin: 10px;
+            }
+
+            #dist{
+                display: block;
+                margin: 10px;
+            }
+
+            #weight{
+                display: block;
+                margin: 10px;
+            }
+
+            #money{
+                display: block;
+                margin: 10px;
+            }
+
+            label{
+                display: block;
+                margin: 0.5rem 0;
+                font-family: Uchen, serif;
+            }
+
+            input{
+                background-color: #0a0a23;
+                border: 1px solid #0a0a23;
+                color: #ffffff;
+                border-radius: 5px;
+            }
+
+            h1{
+                font-family: Ubuntu, sans-serif;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <h1>Conversion Tables</h1>
+            <div id="temp">
+                <label>Celsius</label>
+                <input id="inputCelsius" type="number" placeholder="Celsius" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)">
+                <label>Farenheit</label>
+                <input id="inputFarenheit" type="number" placeholder="Farenheit" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)">
+            </div>
+
+            <div id="ruler">
+                <label>Inches</label>
+                <input id="inputInch" type="number" placeholder="Inches" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)">
+                <label>Centimeters</label>
+                <input id="inputCenti" type="number" placeholder="Centimeters" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)">
+            </div>
+
+            <div id="dist">
+                <label>Feet</label>
+                <input id="inputFt" type="number" placeholder="Feet" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)">
+                <label>Meters</label>
+                <input id="inputMe" type="number" placeholder="Meters" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)">
+            </div>
+
+            <div id="weight">
+                <label>Kilogram</label>
+                <input id="inputKi" type="number" placeholder="Kilograms" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)">
+                <label>Pounds</label>
+                <input id="inputPo" type="number" placeholder="Pounds" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)">
+            </div>
+
+            <div id="money">
+                <label>PH Peso</label>
+                <input id="inputPH" type="number" placeholder="PH Peso" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)">
+                <label>US Dollars</label>
+                <input id="inputUS" type="number" placeholder="US Dollars" oninput="Converter(this.id,this.value)" onchange="Converter(this.id,this.value)">
+            </div>
+        </div>
+
+
+        <script>
+            function Converter(source,valNum) {
+              valNum = parseFloat(valNum);
+
+              var inputFarenheit = document.getElementById("inputFarenheit");
+              var inputCelsius = document.getElementById("inputCelsius");
+
+              var inputInch = document.getElementById("inputInch");
+              var inputCenti = document.getElementById("inputCenti");
+
+              var inputFt = document.getElementById("inputFt");
+              var inputMe = document.getElementById("inputMe");
+
+              var inputKi = document.getElementById("inputKi");
+              var inputPo = document.getElementById("inputPo");
+
+              var inputPH = document.getElementById("inputPH");
+              var inputUS = document.getElementById("inputUS");
+
+              if (source=="inputFarenheit") {
+                inputCelsius.value=((valNum-32)/1.8);
+
+              }
+              if (source=="inputCelsius") {
+                inputFarenheit.value=((valNum*1.8)+32);
+              }
+
+              if (source=="inputInch") {
+                inputCenti.value=((valNum*2.54));
+
+              }
+              if (source=="inputCenti") {
+                inputInch.value=((valNum/2.54));
+              }
+
+              if (source=="inputFt") {
+                inputMe.value=((valNum*0.3048));
+
+              }
+              if (source=="inputMe") {
+                inputFt.value=((valNum/3.28084));
+              }
+
+              if (source=="inputPo") {
+                inputKi.value=((valNum*0.45359237));
+
+              }
+              if (source=="inputKi") {
+                inputPo.value=((valNum*2.2));
+              }
+
+              if (source=="inputPH") {
+                inputUS.value=((valNum*57.32));
+
+              }
+              if (source=="inputUS") {
+                inputPH.value=((valNum*0.17));
+              }
+
+            }
+            </script>
+    </body>
+</html>
