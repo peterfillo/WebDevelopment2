@@ -1,0 +1,161 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+        <title>CIS2102: Pre-midterm Exam</title>
+        <style>
+            .header {
+                overflow: hidden;
+                background-color: #c6e2e9;
+                padding: 10px;
+            }
+            .container{
+                background-color: #ffcaaf;
+                padding: 10px;
+                margin-top: 20px;
+            }
+            .cardStyle{
+                background-color:#fcf4dd; 
+                margin: 10px;
+                padding: 10px;
+            }
+        </style>
+        <script>
+            function conversionUnits(x, data, output) {
+                var inputData = document.getElementById(data).value;
+                var output = document.getElementById(output);
+                if(!isNan(conv)){
+                    switch(x){
+                        case 1: 
+                            output.value = (inputData *9/5) + 32;
+                            break;
+                        case 2: 
+                            output.value = (inputData - 32) * (5/9);
+                            break;
+                        case 3:
+                            output.value = inputData * 2.54;
+                            break;
+                        case 4:
+                            output.value = inputData / 2.54;
+                            break;
+                        case 5:
+                            output.value = inputData * 2.2;
+                            break;
+                        case 6:
+                            output.value = inputData / 2.2;
+                            break;
+                        case 7:
+                            output.value = inputData * 1000;
+                            break;
+                        case 8:
+                            output.value = inputData / 1000;
+                            break;
+                        case 9:
+                            output.value = inputData / 57.28;
+                            break;
+                        case 10:
+                            output.value = inputdata * 57.28;
+                            break;
+                    }
+                }
+                switch(conv)
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header"> <h2>RYAN OMONGOS</h2></div>
+        <div class="container">
+            Temperature Conversion
+            <div class="row">
+                <div class="col-sm cardStyle">
+                    Celsius
+                    <div class="input-group mb-3">
+                        <input id="Celsius" type="text" class="form-control" placeholder="Enter Celsius" onchange="conversionUnits(1, Celsius, Fahrenheit)">
+                        <div class="input-group-append">
+                          <span class="input-group-text" id="basic-addon2">&#176;C</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm cardStyle">
+                    Fahrenheit
+                    <div class="input-group mb-3">
+                        <input id="Celsius" type="text" class="form-control" placeholder="Enter Celsius" onchange="conversionUnits(2, Fahrenheit, Celsius)">
+                        <div class="input-group-append">
+                          <span class="input-group-text" id="basic-addon2">&#176;F</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            Length Conversion
+            <div class="row">
+                <div class="col-sm cardStyle">
+                    Inches
+                    <div class="input-group mb-3">
+                        <input id="inches" type="text" placeholder="Enter Inches" >
+                        <div class="input-group-append">
+                          <span class="input-group-text" id="basic-addon2">inches</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm cardStyle">
+                    Centimeters
+                    <div class="input-group mb-3">
+                        <input id="meters" type="text" class="form-control" placeholder="Enter Centimeters" oninput="inchesToCentimeters(this.value)" onchange="inchesToCentimeters(this.value)">
+                          <span class="input-group-text" id="meters">cms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            Mass Measurement
+            <div class="row">
+                <div class="col-sm cardStyle">
+                    Kilograms
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Enter Kilograms">
+                        <div class="input-group-append">
+                          <span class="input-group-text" id="basic-addon2">kgs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm cardStyle">
+                    Pounds
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Enter Pounds">
+                        <div class="input-group-append">
+                          <span class="input-group-text" id="basic-addon2">lbs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            Volume Conversion
+            <div class="row">
+                <div class="col-sm cardStyle">
+                    Liters
+                    <div class="input-group mb-3">
+                        <input id="Liters" type="text" class="form-control" placeholder="Enter Liters" onchange="conversionUnits(1, Celsius, Fahrenheit)">
+                        <div class="input-group-append">
+                          <span class="input-group-text" id="basic-addon2">&#176;C</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm cardStyle">
+                    Milliliters
+                    <div class="input-group mb-3">
+                        <input id="Milliliters" type="text" class="form-control" placeholder="Enter Milliliters" onchange="conversionUnits(2, Fahrenheit, Celsius)">
+                        <div class="input-group-append">
+                          <span class="input-group-text" id="basic-addon2">&#176;F</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
