@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.header h1 {
+  font-size: 40px;
+}
+
+
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.leftside {
+  flex: 50%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.rightside {   
+  
+  flex: 50%;
+  background-color: white;
+  padding: 20px;
+}
+
+.input{
+    width: 100%;
+    height: 100px;
+    font-size: xx-large;
+}
+
+</style>
+</head>
+<body>
+<script>
+function temp(source,Input) {
+  Input = parseFloat(Input);
+  var Fahrenheit = document.getElementById("Fahrenheit");
+  var Celsius = document.getElementById("Celsius");
+  if (source=="Fahrenheit") {
+    Celsius.value=((Input-32)/1.8);
+  }
+  if (source=="Celsius") {
+    Fahrenheit.value=((Input*1.8)+32);
+  }
+}
+
+function length(source,Input) {
+  Input = parseFloat(Input);
+  var Meters = document.getElementById("Meters");
+  var Feet = document.getElementById("Feet");
+  if (source=="Meters"){
+    Feet.value=(Input*3.2808);
+  }
+  if (source=="Feet") {
+    Meters.value = (Input/3.2808);
+  }
+}
+
+function weight(source,Input) {
+  Input = parseFloat(Input);
+  var Kilos = document.getElementById("Kilos");
+  var Pounds = document.getElementById("Pounds");
+  if (source=="Kilos") {
+    Pounds.value=(Input*2.2046);
+  }
+  if (source=="Pounds") {
+    Kilos.value = (Input/2.2046);
+  }
+}
+
+function speed(source,Input) {
+  Input = parseFloat(Input);
+  var Mph = document.getElementById("Mph");
+  var Kmh= document.getElementById("Kmh");
+  if (source=="Kmh"){
+    Mph.value=(Input/1.609);
+  }
+  if (source=="Mph") {
+    Kmh.value = (Input*1.609);
+  }
+}
+
+function currency(source,Input) {
+  Input = parseFloat(Input);
+  var Php = document.getElementById("Php");
+  var USD = document.getElementById("USD");
+  if (source=="Php"){
+    USD.value=(Input/57.32);
+  }
+  if (source=="USD") {
+    Php.value = (Input*57.32);
+  }
+}
+
+</script>
+
+<div class="row">
+
+  <div class="leftside">
+    <h2>Celsius</h2>
+    <input class="input" id="Celsius" type="number" placeholder="Celsius" oninput="temp(this.id,this.value)" onchange="temp(this.id,this.value)">
+  </div>
+  <div class="rightside">
+    <h2>Fahrenheit</h2>
+    <input class="input" id="Fahrenheit"  type="number"  placeholder="Fahrenheit" oninput="temp(this.id,this.value)" onchange="temp(this.id,this.value)">
+  </div>
+
+  <div class="leftside">
+    <h2>Meters</h2>
+    <input class="input" id="Meters" type="number" placeholder="Meters" oninput="length(this.id,this.value)" onchange="length(this.id,this.value)">
+  </div>
+  <div class="rightside">
+    <h2>Feet</h2>
+    <input class="input" id="Feet"  type="number"  placeholder="Feet" oninput="length(this.id,this.value)" onchange="length(this.id,this.value)">
+  </div>
+
+
+  <div class="leftside">
+    <h2>Kilograms</h2>
+    <input class="input" id="Kilos" type="number" placeholder="Kilograms" oninput="weight(this.id,this.value)" onchange="weight(this.id,this.value)">
+  </div>
+  <div class="rightside">
+    <h2>Pounds</h2>
+    <input class="input" id="Pounds"  type="number"  placeholder="Pounds" oninput="weight(this.id,this.value)" onchange="weight(this.id,this.value)">
+  </div>
+  
+  <div class="leftside">
+    <h2>Miles per hour</h2>
+    <input class="input" id="Mph" type="number" placeholder="Miles per hour" oninput="speed(this.id,this.value)" onchange="speed(this.id,this.value)">
+  </div>
+  <div class="rightside">
+    <h2>Kilometers per hour</h2>
+    <input class="input" id="Kmh"  type="number"  placeholder="Kilometers per hour" oninput="speed(this.id,this.value)" onchange="speed(this.id,this.value)">
+  </div>
+  
+  <div class="leftside">
+    <h2>Philippine Pesos</h2>
+    <input class="input" id="Php" type="number" placeholder="Philippine Peso" oninput="currency(this.id,this.value)" onchange="currency(this.id,this.value)">
+  </div>
+  <div class="rightside">
+    <h2>United States Dollars</h2>
+    <input class="input" id="USD"  type="number"  placeholder="United States Dollars" oninput="currency(this.id,this.value)" onchange="currency(this.id,this.value)">
+  </div>
+  
+
+  
+  
+</div>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function convert(input, output){
+				var output = document.getElementById(output);
+				var inputVal = document.getElementById(input).value;
+				if (isNaN(inputVal)) return;
+				if (input == "celsius"){ 
+					output.value = inputVal * 1.8 + 32;
+				}else if (input == "fahrenheit"){ 
+					output.value = (inputVal-32) * .5556;
+				}else if (input == "inch"){ 
+					output.value = inputVal * 2.54;
+				}else if (input == "centimeter"){ 
+					output.value = inputVal / 2.54;
+				}else if (input == "feet"){ 
+					output.value = inputVal * 0.3048;
+				}else if (input == "meter"){ 
+					output.value = inputVal / 0.3048;
+				}else if (input == "kilograms"){ 
+					output.value = inputVal * 2.2;
+				}else if (input == "pounds"){ 
+					output.value = inputVal / 2.2;
+				}else if (input == "php"){ 
+					output.value = inputVal / 57.33;
+				}else if (input == "usd"){ 
+					output.value = inputVal * 57.33;
+				}
+			}
+		</script>
+    <style>
+        body{
+			font-family: Garamond;
+		}
+		h2{
+			margin: 30px;
+		}
+		div{
+			width: 45%; 
+			display: inline-block;
+			text-align:center;
+			 
+		}
+		
+		input{
+			width: 300px;
+			height: 50px;
+		}
+    </style>
+</head>
+<body>
+    <h2>Conversion</h2> 
+		<div>
+			<h3>celsius</h3>
+			<input id="celsius" onchange="convert('celsius','fahrenheit')" placeholder="degree celsius"></input>
+		</div>
+		<div>
+			<h3>fahrenheit</h3>
+			<input id="fahrenheit" onchange="convert('fahrenheit','celsius')" placeholder="degree fahrenheit"></input>
+		</div>
+		<div>
+			<h3>inches</h3>
+			<input id="inch" onchange="convert('inch','centimeter')" placeholder="inches"></input>
+		</div>
+		<div>
+			<h3>centimeters</h3>
+			<input id="centimeter" onchange="convert('centimeter','inch')" placeholder="centimeter"></input>
+		</div>
+		<div>
+			<h3>feet</h3>
+			<input id="feet" onchange="convert('feet','meter')" placeholder="feet"></input>
+		</div>
+		<div>
+			<h3>meters</h3>
+			<input id="meter" onchange="convert('meter','feet')" placeholder="meters"></input>
+		</div>
+		<div>
+			<h3>kilograms</h3>
+			<input id="kilograms" onchange="convert('kilograms','pounds')" placeholder="kilograms"></input>
+		</div>
+		<div>
+			<h3>pounds</h3>
+			<input id="pounds" onchange="convert('pounds','kilograms')" placeholder="pounds"></input>
+		</div>
+		<div>
+			<h3>Philippine Peso</h3>
+			<input id="php" onchange="convert('php','usd')" placeholder="php"></input>
+		</div>
+		<div>
+			<h3>US Dollar</h3>
+			<input id="usd" onchange="convert('usd','php')" placeholder="usd"></input>
+		</div>
+    </body>
+</html>
