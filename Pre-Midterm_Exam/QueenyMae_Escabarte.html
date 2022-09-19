@@ -35,13 +35,13 @@
 				<h2>Celsius</h2>
 				<textarea id="celsius" placeholder = "CELSIUS" onchange="converter('faren', 'celsius')"></textarea>
 				<h2>Inches</h2>
-				<textarea id="inch" placeholder = "INCHES" onchange="converter('cm', 'in')"></textarea>
+				<textarea id="inch" placeholder = "INCHES" onchange="converter('cm', 'inch')"></textarea>
 				<h2>Feet</h2>
 				<textarea id="feet" placeholder = "FEET" onchange="converter('meter', 'feet')"></textarea>
 				<h2>Kilograms</h2>
 				<textarea id="kg" placeholder = "KILOGRAM" onchange="converter('pounds', 'kg')"></textarea>
 				<h2>Philippine Pesos</h2>
-				<textarea id="php" onchange="converter('dollars', 'php')" placeholder = "PHILIPPINE PESOS"></textarea>
+				<textarea id="php" placeholder = "PHILIPPINE PESOS" onchange="converter('dollars', 'php')"></textarea>
 			</div>
 			<div class="right">
 				<h2>Farenheit</h2>
@@ -65,7 +65,7 @@
 		if(inp == 'celsius'){
 			output.value = 32 + input*1.8;
 		}
-		if(inp == 'inch'){
+		else if(inp == 'inch'){
 			output.value = input*2.54;
 		}
 		else if(inp == 'feet'){
