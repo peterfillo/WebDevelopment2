@@ -1,0 +1,146 @@
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<style>
+	body {
+		text-align: center;
+		font-family: Arial;
+	}
+	
+	h2 {
+		font-size: 32;
+		color: red;
+	}
+	
+	.desc {
+		margin = 0;
+		padding = 0;
+		font-size: 24;
+	}
+	
+	.right {
+		width: 50%;
+		height: 100px;
+		padding: 15;
+		font-size: 18;
+		resize: none;
+	}
+
+	.left {
+		width: 50%;
+		height: 100px;
+		padding: 15;
+		font-size: 18;
+		resize: none;
+	}
+	
+	div{
+		display: inline-block;
+		width: 45%; 
+	}
+	
+	.eq {
+		text-align: center;
+		width: 8%; 
+		pading: 100;
+		font-family: Arial;
+		font-size: 24;
+	}
+	
+	</style>
+	</head>
+	<body>
+
+		<h2>Conversion</h2>
+		<p>by: Joseph Aaron L. Amora</p>
+
+<div>
+  <input id="celsius" class="right" placeholder="Input Celsius" onchange="convertMeas('celsius', 'farenheit')"/><br>
+  <span class="desc">Celsius</span>
+</div>
+<div class="eq"><b>=</b></div>
+<div>
+  <input id="farenheit" class="left" placeholder="Input Farenheit" onchange="convertMeas('farenheit','celsius')"/><br>
+  <span class="desc">Farenheit</span>
+</div>
+<br><br><br>
+
+<div>
+  <input id="inch" class="right" placeholder="Input Inches" onchange="convertMeas('inch','cm')"><br>
+  <span class="desc">Inches</span>
+</div>
+<div class="eq"><b>=</b></div>
+<div>
+  <input id="cm" class="left" placeholder="Input Centimeters" onchange="convertMeas('cm','inch')"><br>
+  <span class="desc">Centimeters</span>
+</div>
+<br><br><br>
+
+<div>
+  <input id="feet" class="right" placeholder="Input Feet" onchange="convertMeas('feet','meter')"><br>
+  <span class="desc">Feet</span>
+</div>
+<div class="eq"><b>=</b></div>
+<div>
+  <input id="meter" class="left" placeholder="Input Meters" onchange="convertMeas('meter','feet')"><br>
+  <span class="desc">Meters</span>
+</div>
+<br><br><br>
+
+<div>
+  <input id="kg" class="right" placeholder="Input Kilograms" onchange="convertMeas('kg','pounds')"><br>
+  <span class="desc">Kilograms</span>
+</div>
+<div class="eq"><b>=</b></div>
+<div>
+  <input id="pounds" class="left" placeholder="Input Pounds" onchange="convertMeas('pounds','kg')"><br>
+  <span class="desc">Pounds</span>
+</div>
+<br><br><br>
+
+<div>
+  <input id="php" class="right" placeholder="Input PHP" onchange="convertMeas('php','usd')"><br>
+  <span class="desc">PHP</span>
+</div>
+<div class="eq"><b>=</b></div>
+<div>
+  <input id="usd" class="left" placeholder="Input USD" onchange="convertMeas('usd','php')"><br>
+  <span class="desc">USD</span>
+</div>
+
+<script>
+function convertMeas(x,y) {
+	var xValue = document.getElementById(x).value;
+	var y = document.getElementById(y);
+
+	if (!isNaN(xValue)) {
+		if (x == "celsius")
+			y.value = xValue * 9 / 5 + 32;
+		else if (x == "farenheit")
+			y.value = (xValue - 32) * 5 / 9;
+		else if (x == "inch")
+			y.value = xValue * 2.54;
+		else if (x == "cm")
+			y.value = xValue / 2.54;
+		else if (x == "feet")
+			y.value = xValue * 0.3048;
+		else if (x == "meter")
+			y.value = xValue / 0.3048;
+		else if (x == "kg")
+			y.value = xValue * 2.20462262;
+		else if (x == "pounds")
+			y.value = xValue / 2.20462262;
+		else if (x == "usd") 
+			y.value = xValue * 57.25;
+		else if (x == "php")
+			y.value = xValue / 57.25;
+		else {
+			return;
+		}
+	}
+}
+</script>
+
+
+</body>
+</html>
