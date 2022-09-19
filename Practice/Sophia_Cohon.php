@@ -26,11 +26,10 @@
     </script>
 </head>
 <body>
-    <p>one line skdjfksbj</p>
     <h1 id="first">Hello World! Added something !!!!  Welcome to my <i>simple website.</i> </h1>
     <button type="button" onclick="myFunction()" id="magic">Click me</button>
     <br>
-	Hello Sophia!
+	Testing...
     <br>
     <?php 
     echo "This is a code in PHP. Hello World!";
