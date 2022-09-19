@@ -1,0 +1,118 @@
+<html>
+    <head>
+        <title>noob_premid</title>
+    </head>
+    <body>
+        <h1>Measurement Converter</h1>
+        <h5>by Clyde Noob</h6>
+            <hr><br><br>
+        <div>
+            <label>Celsius to Fahrenheit</label>
+            <input onchange = "convertToFahrenheit(this.value)">
+            <p>Fahrenheit = <span id="fahrenheit"></span></p>
+        </div>
+        <div>
+            <label>Fahrenheit to Celsius</label>
+            <input onchange = "convertToCelsius(this.value)">
+            <p>Celsius = <span id="celsius"></span></p>
+        </div>
+        <div>
+            <label>Inch to Centimeter</label>
+            <input onchange = "convertToCm(this.value)">
+            <p>Centimeter = <span id="cm"></span></p>
+        </div>
+        <div>
+            <label>Centimeter to Inch</label>
+            <input onchange = "convertToInch(this.value)">
+            <p>Centimeter = <span id="inch"></span></p>
+        </div>
+        <div>
+            <label>Feet to Meter</label>
+            <input onchange = "convertToMeter(this.value)">
+            <p>Meter = <span id="meter"></span></p>
+        </div>
+        <div>
+            <label>Meter to Feet</label>
+            <input onchange = "convertToFeet(this.value)">
+            <p>Meter = <span id="feet"></span></p>
+        </div>
+        <div>
+            <label>Kilogram to Pound</label>
+            <input onchange = "convertToPound(this.value)">
+            <p>Meter = <span id="pound"></span></p>
+        </div>
+        <div>
+            <label>Pound to Kilogram</label>
+            <input onchange = "convertToKilo(this.value)">
+            <p>Meter = <span id="kilo"></span></p>
+        </div>
+        <div>
+            <label>Philippine Peso to US Dollars</label>
+            <input onchange = "convertToPound(this.value)">
+            <p>Meter = <span id="dollar"></span></p>
+        </div>
+        <div>
+            <label>US Dollars to Philippine Peso</label>
+            <input onchange = "convertToPound(this.value)">
+            <p>Meter = <span id="peso"></span></p>
+        </div>
+
+        <script>
+        function convertToFahrenheit(value){
+            value = parseFloat(value);
+            document.getElementById("fahrenheit").innerHTML = value*1.8 + 32;
+        }
+
+        function convertToCelsius(value){
+            value = parseFloat(value);
+            document.getElementById("celsius").innerHTML = (value-32) /1.8;
+        }
+
+        function convertToCm(value) {
+            document.getElementById("cm").innerHTML= value*2.54;
+        }
+
+        function convertToInch(value) {
+            document.getElementById("inch").innerHTML = value/2.54;
+        }
+
+        function convertToMeter(value) {
+            document.getElementById("meter").innerHTML = value*0.3048;
+        }
+
+        function convertToFeet(value) {
+            document.getElementById("feet").innerHTML = value*3.28084;
+        }
+
+        function convertToPound(value) {
+            document.getElementById("pound").innerHTML = value*2.2046;
+        }
+
+        function convertToKilo(value) {
+            document.getElementById("kilo").innerHTML = value/2.2046;
+        }
+
+        function convertToDollar(value) {
+            document.getElementById("dollar").innerHTML = value/57.01;
+        }
+
+        function convertToPeso(value) {
+            document.getElementById("peso").innerHTML = value*57.01;
+        }
+        </script>
+        <style>
+            div{
+                width: 50%;
+                height: 150px;
+                float: left;
+            }
+            h1{
+                text-align: center;
+            }
+            h5{
+                text-align: center;
+            }
+        </style>
+    </body>
+    
+</html>

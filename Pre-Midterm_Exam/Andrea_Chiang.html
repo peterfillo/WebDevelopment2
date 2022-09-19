@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<title>UNIT CONVERTER</title>
+<body>
+<style>
+
+
+div{
+display: inline-block;
+}
+
+.left{
+  width: 75%;
+  height: 50px;
+  font-size: 20px;
+  background-color:#D3D3D3
+}
+
+.right{
+  width: 75%;
+  height: 50px;
+  font-size: 20px;
+  background-color:#D3D3D3
+}
+
+</style>
+<body style="background-color: #C1E1C1">
+<center>
+    <form>
+	<h1>Temperature</h1>
+    <div>
+        <h3>Celsius</h3>
+      <input id="celsius" class="left" onchange="convert('celsius','farenheit')" placeholder="Enter number..."></input>
+    </div>
+	=
+    <div>
+        <h3>Farenheit</h3>
+      <input id="farenheit" class="right" onchange="convert('farenheit','celsius')" placeholder="Enter number..."></input>
+    </div>
+	<br><br><br>
+    <hr>
+	<h1>Short Length</h1>
+    <div>
+        <h3>Inches</h3>
+      <input id="in" class="left" onchange="convert('in','cm')" placeholder="Enter number..."></input>
+    </div>
+	=
+    <div>
+        <h3>Centimeters</h3>
+      <input id="cm" class="right" onchange="convert('cm','in')" placeholder="Enter number..."></input>
+    </div>
+    <br><br><br>
+    <hr>
+	<h1>Long Length</h1>
+    <div>
+        <h3>Feet</h3>
+      <input id="ft" class="left" onchange="convert('ft','meter')" placeholder="Enter number..."></input>
+    </div>
+	=
+    <div>
+        <h3>Meters</h3>
+      <input id="meter" class="right" onchange="convert('meter','ft')" placeholder="Enter number..."></input>
+    </div>
+	<br><br><br>
+    <hr>
+    <h1>Weight</h1>
+    <div>
+        <h3>Kilograms</h3>
+      <input id="kg" class="left" onchange="convert('kg','pounds')" placeholder="Enter number..."></input>
+    </div>
+	=
+    <div>
+        <h3>Pounds</h3>
+      <input id="pounds" class="right" onchange="convert('pounds','kg')" placeholder="Enter number..."></input>
+    </div>
+    <br><br><br>
+    <hr>
+	<h1>Currency</h1>
+    <div>
+        <h3>PHP</h3>
+      <input id="php" class="left" onchange="convert('php','usd')" placeholder="Enter number..."></input>
+    </div>
+	=
+    <div>
+        <h3>USD</h3>
+      <input id="usd" class="right" onchange="convert('usd','php')" placeholder="Enter number..."></input>
+    </div>
+    
+    </form>
+    <br><br>
+   </center>
+   
+
+<script>
+function convert(x,y)
+{
+	var input = document.getElementById(x).value;
+	var y = document.getElementById(y);
+
+	if (isNaN(input)) return;
+
+	if (x == "celsius")	y.value = ((9/5) * input ) + 32;
+	else if (x == "farenheit") y.value = (5 / 9) * (input - 32);
+	
+	else if (x == "in") y.value = input * 2.54;
+	else if (x == "cm") y.value = input / 2.54;
+	
+	else if (x == "ft") y.value = input * 0.3048;
+	else if (x == "meter") y.value = input / 0.3048;
+	
+	else if (x == "kg") y.value = input * 2.20;
+	else if (x == "pounds") y.value = input / 2.20;
+	
+	else if (x == "usd") y.value = input * 57.25;
+	else if (x == "php") y.value = input / 57.25;
+}
+</script>
+</body>
+ 
+    </body>
+    </html>
