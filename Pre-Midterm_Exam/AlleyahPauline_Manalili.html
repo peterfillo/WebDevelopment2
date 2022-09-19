@@ -6,14 +6,20 @@
             display: flex;
             flex-direction: row;
             text-align:center;
-        }
-
-        div {
-            padding-right: 50px;
+            justify-content: space-between;
         }
 
         h3 {
             color:#779ecb;
+        }
+
+        .content {
+            max-width: 500px;
+            margin: auto;
+        }
+
+        .title {
+            text-align: center;
         }
 
 
@@ -124,65 +130,70 @@
 </head>
 
 <body>
-    <h1> Conversion </h1>
-    <br>
-    <div class="flex-box">
-        <div>
-            <h3>Celsius</h3>
-            <input type="number" id="celsius" placeholder="Degree Celsius" onchange="celsiusToFarenheit()">
+    <div class="content">
+        <div class="title">
+            <h1> Conversion </h1>
+            <br>
         </div>
 
-        <div>
-            <h3>Farenheit</h3>
-            <input type="number" id="farenheit" placeholder="Degree Farenheit" onchange="farenheitToCelsius()">
-        </div>
-    </div>
+        <div class="flex-box">
+            <div>
+                <h3>Celsius</h3>
+                <input type="number" id="celsius" placeholder="Degree Celsius" onchange="celsiusToFarenheit()">
+            </div>
 
-    <div class="flex-box">
-        <div>
-            <h3>Inches</h3>
-            <input type="number" id="inches" placeholder="Inches" onchange="inchesToCentimeters()">
-        </div>
-
-        <div>
-            <h3>Centimeters</h3>
-            <input type="number" id="centimeters" placeholder="Centimeters" onchange="centimetersToInches()">
-        </div>
-    </div>
-
-    <div class="flex-box">
-        <div>
-            <h3>Feet</h3>
-            <input type="number" id="feet" placeholder="Feet" onchange="feetToMeters()">
+            <div>
+                <h3>Farenheit</h3>
+                <input type="number" id="farenheit" placeholder="Degree Farenheit" onchange="farenheitToCelsius()">
+            </div>
         </div>
 
-        <div>
-            <h3>Meters</h3>
-            <input type="number" id="meters" placeholder="Meters" onchange="metersToFeet()">
-        </div>
-    </div>
+        <div class="flex-box">
+            <div>
+                <h3>Inches</h3>
+                <input type="number" id="inches" placeholder="Inches" onchange="inchesToCentimeters()">
+            </div>
 
-    <div class="flex-box">
-        <div>
-            <h3>Kilograms</h3>
-            <input type="number" id="kilograms" placeholder="Kilograms" onchange="kilogramsToPounds()">
-        </div>
-
-        <div>
-            <h3>Pounds</h3>
-            <input type="number" id="pounds" placeholder="Pounds" onchange="poundsToKilograms()">
-        </div>
-    </div>
-
-    <div class="flex-box">
-        <div>
-            <h3>Philippine Pesos</h3>
-            <input type="number" id="php" placeholder="Philippine Pesos" onchange="phpToUs()">
+            <div>
+                <h3>Centimeters</h3>
+                <input type="number" id="centimeters" placeholder="Centimeters" onchange="centimetersToInches()">
+            </div>
         </div>
 
-        <div>
-            <h3>US Dollars</h3>
-            <input type="number" id="us" placeholder="US Dollars" onchange="usToPhp()">
+        <div class="flex-box">
+            <div>
+                <h3>Feet</h3>
+                <input type="number" id="feet" placeholder="Feet" onchange="feetToMeters()">
+            </div>
+
+            <div>
+                <h3>Meters</h3>
+                <input type="number" id="meters" placeholder="Meters" onchange="metersToFeet()">
+            </div>
+        </div>
+
+        <div class="flex-box">
+            <div>
+                <h3>Kilograms</h3>
+                <input type="number" id="kilograms" placeholder="Kilograms" onchange="kilogramsToPounds()">
+            </div>
+
+            <div>
+                <h3>Pounds</h3>
+                <input type="number" id="pounds" placeholder="Pounds" onchange="poundsToKilograms()">
+            </div>
+        </div>
+
+        <div class="flex-box">
+            <div>
+                <h3>Philippine Pesos</h3>
+                <input type="number" id="php" placeholder="Philippine Pesos" onchange="phpToUs()">
+            </div>
+
+            <div>
+                <h3>US Dollars</h3>
+                <input type="number" id="us" placeholder="US Dollars" onchange="usToPhp()">
+            </div>
         </div>
     </div>
 

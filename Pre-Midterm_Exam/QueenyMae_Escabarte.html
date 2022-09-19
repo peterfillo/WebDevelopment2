@@ -35,7 +35,11 @@
 				<h2>Celsius</h2>
 				<textarea id="celsius" placeholder = "CELSIUS" onchange="converter('faren', 'celsius')"></textarea>
 				<h2>Inches</h2>
+<<<<<<< HEAD
 				<textarea id="inch" placeholder = "INCHES" onchange="converter('cm', 'in')"></textarea>
+=======
+				<textarea id="inch" placeholder = "INCHES" onchange="converter('cm', 'inch')"></textarea>
+>>>>>>> 873e8cc2acb1fa0f6ba78c4172bf81e197c267dc
 				<h2>Feet</h2>
 				<textarea id="feet" placeholder = "FEET" onchange="converter('meter', 'feet')"></textarea>
 				<h2>Kilograms</h2>
@@ -53,19 +57,32 @@
 				<h2>Pounds</h2>
 				<textarea id="pounds" placeholder = "POUNDS" onchange="converter('kg', 'pounds')"></textarea>
 				<h2>US Dollars</h2>
+<<<<<<< HEAD
 				<textarea id="dollars" placeholder = "US DOLLARS" onchange="converter('php', 'dollars')"></textarea>
+=======
+				<textarea id="dollars" onchange="converter('php', 'dollars')" placeholder = "US DOLLARS"></textarea>
+>>>>>>> 873e8cc2acb1fa0f6ba78c4172bf81e197c267dc
 			</div>
 		</div>
 	</div>
 	
 <script type="text/javascript">
 	function converter(output, inp){
+<<<<<<< HEAD
 		var output = document.getElementbyId(output);
 		var input = document.getElementbyId(inp).value;
 		if(inp == 'celsius'){
 			output.value = 32 + input*1.8;
 		}
 		if(inp == 'inch'){
+=======
+		var output = document.getElementById(output);
+		var input = document.getElementById(inp).value;
+		if(inp == 'celsius'){
+			output.value = 32 + input*1.8;
+		}
+		else if(inp == 'inch'){
+>>>>>>> 873e8cc2acb1fa0f6ba78c4172bf81e197c267dc
 			output.value = input*2.54;
 		}
 		else if(inp == 'feet'){

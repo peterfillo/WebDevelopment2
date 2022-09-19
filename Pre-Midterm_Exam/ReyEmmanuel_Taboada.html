@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script>
+		function first(source, desti){
+
+			var first = document.getElementById(source).value;
+			var second = document.getElementById(desti);
+
+
+			if(source == "cel"){
+				second.value = first * 9 / 5 + 32;
+			}else if (source == "far") {
+				second.value = (first - 32) * 5 / 9;
+			}
+		}
+
+		function second(source,desti){
+					var first = document.getElementById(source).value;
+					var second = document.getElementById(desti);
+
+					if (source == "inch"){
+					second.value = first * 2.54;
+					}
+					else if (source == "cm"){
+					second.value = first / 2.54;
+					}
+		}
+
+		function third(source,desti){
+					var first = document.getElementById(source).value;
+					var second = document.getElementById(desti);
+
+					if (source == "feet"){
+					second.value = first * 0.3048;
+					}else if (source == "meter"){
+					second.value = first / 0.3048;
+					}
+
+		}
+
+
+		function fourth(source,desti){
+					var first = document.getElementById(source).value;
+					var second = document.getElementById(desti);
+
+					if (source == "kg") {
+					second.value = first * 2.20462262;
+					}else if (source == "pounds"){
+					second.value = first / 2.20462262;
+					}
+		}
+
+
+
+		function fifth(source,desti){
+					var first = document.getElementById(source).value;
+					var second = document.getElementById(desti);
+
+					if (source == "usd"){
+					second.value = first * 57.35;
+					}else if (source == "php"){
+					second.value = first / 57.35;
+					}
+		}
+
+
+	</script>
+	<title>PREMID TABOADA</title>
+</head>
+<body style="background-color: peachpuff;">
+
+<center>
+	<h1>REY EMMANUEL TABOADA - PRE MIDTERM</h1>
+</center>	
+
+<center>
+
+<form style="margin-top: 10%;">
+
+	<br>
+	<textarea id="cel"  onchange="first('cel','far')" placeholder="Input Celsius"></textarea>
+	<textarea id="far"  onchange="first('far','cel')" placeholder="Input Farenheits"></textarea>
+	<br>
+
+	<textarea id="inch" onchange="second('inch','cm')" placeholder="Input Inches"></textarea>
+	<textarea id="cm"   onchange="second('cm','inch')" placeholder="Input Centimeters"></textarea>
+	<br>
+
+	<textarea id="feet" onchange="third('feet','meter')" placeholder="Input Feet"></textarea>
+	<textarea id="meter" onchange="third('meter','feet')" placeholder="Input Meters"></textarea>
+	<br>
+
+	<textarea id="kg"  onchange="fourth('kg','pounds')" placeholder="Input Kilograms"></textarea>
+	<textarea id="pounds" onchange="fourth('pounds','kg')" placeholder="Input Pounds"></textarea>
+	<br>
+
+	<textarea id="php"  onchange="fifth('php','usd')" placeholder="Input PHP"></textarea>
+	<textarea id="usd"  onchange="fifth('usd','php')" placeholder="Input Dollar"></textarea>
+	<br>
+
+</form>
+
+</center>
+
+</body>
+</html>
