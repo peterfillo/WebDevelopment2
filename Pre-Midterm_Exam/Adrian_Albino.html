@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Premidterms Web Development</title>
+		<style>
+			html {
+				background-color: #ffa500;
+				padding: 0;
+				margin: 0;'
+			}
+			h1 {
+				color: black;
+				font-size: 30pt;
+				font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+				text-align: center;
+				border: 0;
+				margin: 0;
+			}
+
+			p {
+				color: black;
+				font-size: 15pt;
+				font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+				text-align: center;
+				border: 0;
+				margin: 0;
+			}
+
+			::placeholder {
+				color: black;
+				opacity:  1;
+				font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+			}
+			.left {
+			  width: 100%;
+			  height: 115px;
+			  padding: 20px 20px;
+			  background-color: #ffffbf;
+			  box-sizing: border-box;
+			  border-radius: 50px 15px;
+			}
+
+			.right {
+			  width: 100%;
+			  height: 115px;
+			  padding: 20px 20px;
+			  background-color: #ffffbf;
+			  box-sizing: border-box;
+			  border-radius: 15px 50px;
+			}
+
+			.headers {
+				color: black;
+				font-size: 13pt;
+				font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu;
+				text-align: center;
+			}
+			.conversions {
+				text-align:center;
+				width: 49.5%; 
+				display: inline-block;
+			}
+		</style>
+		<script>
+			function conversion(left,right)
+				{
+					var inputted = document.getElementById(left).value;
+					var right = document.getElementById(right);
+					if (left == "celsius")	{
+						right.value = inputted * 9 / 5 + 32 ;
+					}
+					else if (left == "farenheit") {
+						right.value = (inputted - 32) * 5 / 9;
+					}
+					else if (left == "inch") {
+						right.value = inputted * 2.54;
+					}
+					else if (left == "cm") {
+						right.value = inputted / 2.54;
+					}
+					else if (left == "feet") {
+						right.value = inputted * 0.3048;
+					}
+					else if (left == "meter") {
+						right.value = inputted / 0.3048;
+					}
+					else if (left == "kg") {
+						right.value = inputted * 2.20462;
+					}
+					else if (left == "pounds") {
+						right.value = inputted / 2.20462;
+					}
+					else if (left == "usd") {
+						right.value = inputted * 57.26;
+					}
+					else if (left == "peso") {
+						right.value = inputted / 57.26;
+					}
+				}
+		</script> 
+	</head>
+	<body>
+		<h1>Conversion</h1>
+		<br>
+		<p>Adrian Joseph Albino</p>
+	    <form>
+		    <div class="conversions">
+		        <h3 class="headers">Celsius</h3>
+		      	<textarea class="left" id="celsius"  onchange="conversion('celsius','farenheit')" placeholder="Degree Celsius"></textarea>
+		    </div>
+		    <div class="conversions">
+		        <h3 class="headers">Farenheit</h3>
+		      	<textarea class="right" id="farenheit"  onchange="conversion('farenheit','celsius')" placeholder="Degree Farenheit"></textarea>
+		    </div>
+		    
+		    <div class="conversions">
+		        <h3 class="headers">Inches</h3>
+		      	<textarea class="left" id="inch" onchange="conversion('inch','cm')" placeholder="Inches"></textarea>
+		    </div>
+		    <div class="conversions">
+		        <h3 class="headers">Centimeters</h3>
+		      	<textarea class="right" id="cm" onchange="conversion('cm','inch')" placeholder="Centimeters"></textarea>
+		    </div>
+		    
+		    <div class="conversions">
+		        <h3 class="headers">Feet</h3>
+		      	<textarea class="left" id="feet" onchange="conversion('feet','meter')" placeholder="Feet"></textarea>
+		    </div>
+		    <div class="conversions">
+		        <h3 class="headers">Meters</h3>
+		      	<textarea class="right" id="meter" onchange="conversion('meter','feet')" placeholder="Meters"></textarea>
+		    </div>
+		    
+		    <div class="conversions">
+		        <h3 class="headers">Kilograms</h3>
+		      	<textarea class="left" id="kg" onchange="conversion('kg','pounds')" placeholder="Kilograms"></textarea>
+		    </div>
+		    <div class="conversions">
+		        <h3 class="headers">Pounds</h3>
+		      	<textarea class="right" id="pounds" onchange="conversion('pounds','kg')" placeholder="Pounds"></textarea>
+		    </div>
+		    
+		    <div class="conversions">
+		        <h3 class="headers">Philippine Pesos</h3>
+		      	<textarea class="left" id="peso" onchange="conversion('peso','usd')" placeholder="Philippine Pesos"></textarea>
+		    </div>
+		    <div class="conversions">
+		        <h3 class="headers">US Dollars</h3>
+		      	<textarea class="right" id="usd" onchange="conversion('usd','peso')" placeholder="US Dollars"></textarea>
+		    </div>
+		    <br>
+		    <br>
+		    <br>
+		    <br>
+		    <br>
+	    </form>
+	</body>
+</html>
+
+
+
