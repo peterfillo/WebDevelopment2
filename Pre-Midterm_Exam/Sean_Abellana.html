@@ -1,0 +1,192 @@
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  </head>
+  <body>
+    <h1 style="text-align: center"> Converter.com
+      <p style="font-size:small"> by Sean Abellana </p>
+	<p style="font-size:small"> 21102690 </p>
+    </h1>
+<h2 style="margin-left: 35%">
+	<table style="text-align: center; border: 1px solid; padding-bottom: 10px">
+	<td >
+	<p>
+	Fahrenheit
+	</p>
+	<p>
+	<input id="Finp" type="number" placeholder="degrees Fahrenheit" oninput="FtoCconv(this.value)" onchange="FtoCconv(this.value)">
+	<span id="CtoFout"> </span>
+	</p>
+	</td>
+	
+	<td>
+	<p>
+	Celsius
+	</p>
+	<p>
+	<input id="Cinp" type="number" placeholder="degrees Celsius" oninput="CtoFconv(this.value)" onchange="CtoFconv(this.value)">
+	<span id="FtoCout"> </span>
+	</p>
+	</td>
+
+	</table>
+	<script>
+	function FtoCconv(valNum) {
+  	valNum = parseFloat(valNum);
+  	document.getElementById("FtoCout").innerHTML = (valNum-32) / 1.8;
+	}
+	
+	function CtoFconv(valNum) {
+ 	 valNum = parseFloat(valNum);
+ 	 document.getElementById("CtoFout").innerHTML = (valNum * 1.8) +32 ;
+	}
+	</script>
+</h2>
+
+<h3 style="margin-left: 35%">
+<table style="text-align: center; border: 1px solid; padding-bottom: 10px">
+	<td >
+	<p>
+	Inches
+	</p>
+	<p>
+	<input id="Iinp" type="number" placeholder="Inches" oninput="ItoCm(this.value)" onchange="ItoCm(this.value)">
+	<span id="CmtoIo"> </span>
+	</p>
+	</td>
+	
+	<td>
+	<p>
+	Centimeter
+	</p>
+	<p>
+	<input id="Cmimp" type="number" placeholder="Centimeter" oninput="CmtoI(this.value)" onchange="CmtoI(this.value)">
+	<span id="ItoCmo"> </span>
+	</p>
+	</td>
+
+	</table>
+	<script>
+	function ItoCm(valNum) {
+  	valNum = parseFloat(valNum);
+  	document.getElementById("ItoCmo").innerHTML = valNum * 2.54;
+	}
+	
+	function CmtoI(valNum) {
+ 	 valNum = parseFloat(valNum);
+ 	 document.getElementById("CmtoIo").innerHTML = valNum /  2.54 ;
+	}
+	</script>
+</h3>
+
+<h4 style="margin-left: 35%">
+<table style="text-align: center; border: 1px solid; padding-bottom: 10px">
+	<td >
+	<p>
+	Feet
+	</p>
+	<p>
+	<input id="Feetinp" type="number" placeholder="Feet" oninput="FtoMc(this.value)" onchange="FtoMc(this.value)">
+	<span id="MtoFcout"> </span>
+	</p>
+	</td>
+	
+	<td>
+	<p>
+	Meters
+	</p>
+	<p>
+	<input id="Meterinp" type="number" placeholder="Meters" oninput="MtoFc(this.value)" onchange="MtoFc(this.value)">
+	<span id="FtoMcout"> </span>
+	</p>
+	</td>
+
+	</table>
+	<script>
+	function FtoMc(valNum) {
+  	valNum = parseFloat(valNum);
+  	document.getElementById("FtoMcout").innerHTML = valNum * 0.3048;
+	}
+	
+	function MtoFc(valNum) {
+ 	 valNum = parseFloat(valNum);
+ 	 document.getElementById("MtoFcout").innerHTML = valNum / 0.3048 ;
+	}
+	</script>
+</h4>
+
+<h5 style="margin-left: 35%">
+<table style="text-align: center; border: 1px solid; padding-bottom: 10px">
+	<td >
+	<p>
+	Kilogram
+	</p>
+	<p>
+	<input id="Kginp" type="number" placeholder="Kg" oninput="KgtoLb(this.value)" onchange="KgtoLb(this.value)">
+	<span id="LbtoKgout"> </span>
+	</p>
+	</td>
+	
+	<td>
+	<p>
+	Pounds
+	</p>
+	<p>
+	<input id="Lbinp" type="number" placeholder="lb" oninput="LbtoKg(this.value)" onchange="LbtoKg(this.value)">
+	<span id="KgtoLbout"> </span>
+	</p>
+	</td>
+
+	</table>
+	<script>
+	function KgtoLb(valNum) {
+  	valNum = parseFloat(valNum);
+  	document.getElementById("KgtoLbout").innerHTML = valNum * 2.2046;
+	}
+	
+	function LbtoKg(valNum) {
+ 	 valNum = parseFloat(valNum);
+ 	 document.getElementById("LbtoKgout").innerHTML = valNum / 2.2046 ;
+	}
+	</script>
+</h5>
+
+<h6 style="margin-left: 35%">
+<table style="text-align: center; border: 1px solid; padding-bottom: 10px">
+	<td >
+	<p>
+	Php
+	</p>
+	<p>
+	<input id="Phpinp" type="number" placeholder="Php" oninput="PhptoUsd(this.value)" onchange="PhptoUsd(this.value)">
+	<span id="UsdtoPhpout"> </span>
+	</p>
+	</td>
+	
+	<td>
+	<p>
+	Usd
+	</p>
+	<p>
+	<input id="Usdinp" type="number" placeholder="Usd" oninput="UsdtoPhp(this.value)" onchange="UsdtoPhp(this.value)">
+	<span id="PhptoUsdout"> </span>
+	</p>
+	</td>
+
+	</table>
+	<script>
+	function PhptoUsd(valNum) {
+  	valNum = parseFloat(valNum);
+  	document.getElementById("PhptoUsdout").innerHTML = valNum / 57.34;
+	}
+	
+	function UsdtoPhp(valNum) {
+ 	 valNum = parseFloat(valNum);
+ 	 document.getElementById("UsdtoPhpout").innerHTML = valNum * 57.34 ;
+	}
+	</script>
+</h6>
+    
+  </body>
+</html>
