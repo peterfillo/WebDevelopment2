@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<title>Assignment</title>
+<body>
+
+<p>
+  <label>Celsius</label>
+  <input id="inputCelsius" type="number" placeholder="Degree Celsius" oninput="celsiusConverter(this.value)" onchange="celsiusConverter(this.value)">
+</p>
+<p>Farenheit: <span id="outputFarenheit"></span></p>
+<br>
+
+
+<p>
+  <label>Fahrenheit</label>
+  <input id="inputFahrenheit" type="number" placeholder="Degree Fahrenheits" oninput="farenheitConverter(this.value)" onchange="farenheitConverter(this.value)">
+</p>
+<p>Celcius: <span id="outputCelcius"></span></p>
+<br>
+
+<p>
+  <label>Inches</label>
+  <input id="inputInches" type="number" placeholder="Inches" oninput="inchesConverter(this.value)" onchange="inchesConverter(this.value)">
+</p>
+<p>Centimeters: <span id="outputcm"></span></p>
+<br>
+
+<p>
+  <label>Centimeters</label>
+  <input id="inputcm" type="number" placeholder="Centimeters" oninput="centimetersConverter(this.value)" onchange="centimetersConverter(this.value)">
+</p>
+<p>Inches: <span id="outputInches"></span></p>
+<br>
+
+<p>
+  <label>Feet</label>
+  <input id="inputFeet" type="number" placeholder="Feet" oninput="feetConverter(this.value)" onchange="feetConverter(this.value)">
+</p>
+<p>Meters: <span id="outputMeters"></span></p>
+<br>
+
+<p>
+  <label>Meters</label>
+  <input id="inputMeters" type="number" placeholder="Meters" oninput="metersConverter(this.value)" onchange="metersConverter(this.value)">
+</p>
+<p>Feet: <span id="outputFeet"></span></p>
+<br>
+
+<p>
+  <label>Kilograms</label>
+  <input id="inputKilograms" type="number" placeholder="Kilograms" oninput="kilogramsConverter(this.value)" onchange="kilogramsConverter(this.value)">
+</p>
+<p>Pounds: <span id="outputPounds"></span></p>
+<br>
+
+<p>
+  <label>Pounds</label>
+  <input id="inputPounds" type="number" placeholder="Pounds" oninput="poundsConverter(this.value)" onchange="poundsConverter(this.value)">
+</p>
+<p>Kilograms: <span id="outputKilograms"></span></p>
+<br>
+
+<p>
+  <label>Philippine Pesos</label>
+  <input id="inputPhilippinePesos" type="number" placeholder="Philippine Pesos" oninput="philippinepesosConverter(this.value)" onchange="philippinepesosConverter(this.value)">
+</p>
+<p>US Dollars: <span id="outputUSDollars"></span></p>
+<br>
+
+<p>
+  <label>US Dollars</label>
+  <input id="inputUSDollars" type="number" placeholder="US Dollars" oninput="usdollarsConverter(this.value)" onchange="usdollarsConverter(this.value)">
+</p>
+<p>Philippine Pesos: <span id="outputPhilippinePesos"></span></p>
+
+<script> //Celsius to Farenheit.
+function celsiusConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputFarenheit").innerHTML=(valNum*1.8)+32;
+}
+</script>
+
+<script> //Farenheit to Celsius.
+function farenheitConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputCelcius").innerHTML=(valNum-32)/1.8;
+}
+</script>
+
+
+<script> //Inches to Centimeters.
+function inchesConverter(valNum) {
+  document.getElementById("outputcm").innerHTML=valNum/0.39370;
+}
+</script>
+
+<script> //Centimeters to Inches.
+function centimetersConverter(valNum) {
+  document.getElementById("outputInches").innerHTML=valNum*0.39370;
+}
+</script>
+
+<script> //Feet to Meters.
+function feetConverter(valNum) {
+  document.getElementById("outputMeters").innerHTML=valNum/3.2808;
+}
+</script>
+
+<script> //Meters to Feet.
+function metersConverter(valNum) {
+  document.getElementById("outputFeet").innerHTML=valNum*3.2808;
+}
+</script>
+
+<script> //Kilograms to Pounds.
+function kilogramsConverter(valNum) {
+  document.getElementById("outputPounds").innerHTML=valNum*2.2046;
+}
+</script>
+
+<script> //Pounds to Kilograms.
+function poundsConverter(valNum) {
+  document.getElementById("outputKilograms").innerHTML=valNum/2.2046;
+}
+</script>
+
+<script> //Philippine Pesos to US Dollars.
+function philippinepesosConverter(valNum) {
+  document.getElementById("outputUSDollars").innerHTML=valNum*0.0174475903;
+}
+</script>
+
+<script> //US Dollars to Philippine Pesos.
+function usdollarsConverter(valNum) {
+  document.getElementById("outputPhilippinePesos").innerHTML=valNum*57.314505;
+}
+</script>
+
+</body>
+</html>
