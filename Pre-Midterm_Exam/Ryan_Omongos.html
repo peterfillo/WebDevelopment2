@@ -95,7 +95,7 @@
                 <div class="col-sm cardStyle">
                     Inches
                     <div class="input-group mb-3">
-                        <input id="inches" type="text" placeholder="Enter Inches" >
+                        <input id="inches" type="text" placeholder="Enter Inches" onchange="conversionUnits(3, inches, meters)">
                         <div class="input-group-append">
                           <span class="input-group-text" id="basic-addon2">inches</span>
                         </div>
@@ -104,7 +104,7 @@
                 <div class="col-sm cardStyle">
                     Centimeters
                     <div class="input-group mb-3">
-                        <input id="meters" type="text" class="form-control" placeholder="Enter Centimeters" oninput="inchesToCentimeters(this.value)" onchange="inchesToCentimeters(this.value)">
+                        <input id="meters" type="text" class="form-control" placeholder="Enter Centimeters" onchange="conversionUnits(4, maters, inches)">
                           <span class="input-group-text" id="meters">cms</span>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                 <div class="col-sm cardStyle">
                     Kilograms
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Enter Kilograms">
+                        <input id="kgs" type="text" class="form-control" placeholder="Enter Kilograms" onchange="conversionUnits(5, kgs, lbs)">
                         <div class="input-group-append">
                           <span class="input-group-text" id="basic-addon2">kgs</span>
                         </div>
@@ -126,7 +126,7 @@
                 <div class="col-sm cardStyle">
                     Pounds
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Enter Pounds">
+                        <input id="lbs" type="text" class="form-control" placeholder="Enter Pounds" onchange="conversionUnits(6, lbs, kgs)">
                         <div class="input-group-append">
                           <span class="input-group-text" id="basic-addon2">lbs</span>
                         </div>
@@ -140,7 +140,7 @@
                 <div class="col-sm cardStyle">
                     Liters
                     <div class="input-group mb-3">
-                        <input id="Liters" type="text" class="form-control" placeholder="Enter Liters" onchange="conversionUnits(1, Celsius, Fahrenheit)">
+                        <input id="Liters" type="text" class="form-control" placeholder="Enter Liters" onchange="conversionUnits(7, Liters, Milliliters)">
                         <div class="input-group-append">
                           <span class="input-group-text" id="basic-addon2">&#176;C</span>
                         </div>
@@ -149,7 +149,30 @@
                 <div class="col-sm cardStyle">
                     Milliliters
                     <div class="input-group mb-3">
-                        <input id="Milliliters" type="text" class="form-control" placeholder="Enter Milliliters" onchange="conversionUnits(2, Fahrenheit, Celsius)">
+                        <input id="Milliliters" type="text" class="form-control" placeholder="Enter Milliliters" onchange="conversionUnits(8, Milliliters, Liters)">
+                        <div class="input-group-append">
+                          <span class="input-group-text" id="basic-addon2">&#176;F</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            Currency Conversion from Php to USD
+            <div class="row">
+                <div class="col-sm cardStyle">
+                    Philippine Peso
+                    <div class="input-group mb-3">
+                        <input id="Peso" type="text" class="form-control" placeholder="Enter Php Amount" onchange="conversionUnits(9, Peso, Dollars)">
+                        <div class="input-group-append">
+                          <span class="input-group-text" id="basic-addon2">&#176;C</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm cardStyle">
+                    US Dollars
+                    <div class="input-group mb-3">
+                        <input id="Dollars" type="text" class="form-control" placeholder="Enter USD Amount" onchange="conversionUnits(10, Dollars, Peso)">
                         <div class="input-group-append">
                           <span class="input-group-text" id="basic-addon2">&#176;F</span>
                         </div>
