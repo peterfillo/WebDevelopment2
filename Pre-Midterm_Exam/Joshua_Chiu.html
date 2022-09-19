@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <style>
+
+        body{
+            background-color: blanchedalmond;
+        }
+
+        .unit_title{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 46px;
+            color:red;
+            display: flex;
+            margin-left: 250px;
+        }
+
+        .title{
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 68px;
+            background: yellow;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .resultbox {
+        width: 50%;
+        height: 150px;
+        box-sizing: border-box;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 4px;
+        padding: 25px 20px;
+        background-color: #3ad59a;
+        text-align: center;
+        font-size: 30px;
+        resize: none;
+        margin-bottom: 50px;
+        }
+
+        .convertbox {
+        width: 50%;
+        height: 150px;
+        font-size: 30px;    
+        resize: none;
+        border-radius: 4px;
+        background-color: #52e3c1;
+        padding: 25px 20px;
+        box-sizing: border-box;
+        text-align: center;
+        border: 2px solid rgb(0, 0, 0);
+        }
+        
+        div{
+        text-align:center;
+        display: inline-block;
+        width: 49%; 
+        
+        }
+
+    </style>
+
+
+    <body>
+        <center>
+            <div class = "title">
+                Conversion Table Operation
+            </div>
+        </center>
+    <br><br>
+
+
+<form>
+    <div>
+    <div class = "unit_title">Celsius</div><p>
+      <input type ="number"  id="celsius" class="resultbox" onchange="convertbox('celsius','Fahrenheit')" placeholder="Insert Number"></input>
+    </div>
+    <div>
+    
+    <div class = "unit_title">Fahrenheit</div>
+      <input type="number" id="Fahrenheit" class="convertbox" onchange="convertbox('Fahrenheit','celsius')" placeholder="Insert Number"></input>
+    </div>
+    
+    <div>
+        <div class = "unit_title">Inches</div>
+      <input type="number" id="inch" class="resultbox" onchange="convertbox('inch','cm')" placeholder="Insert Number"></input>
+    </div>
+
+    <div>
+        <div class = "unit_title">Centimeters</div>
+      <input type="number" id="cm" class="convertbox" onchange="convertbox('cm','inch')" placeholder="Insert Number"></input>
+    </div>
+    
+    <div>
+        <div class = "unit_title">Feet</div>
+      <input type="number" id="feet" class="resultbox" onchange="convertbox('feet','meter')" placeholder="Insert Number"></input>
+    </div>
+
+    <div>
+        <div class = "unit_title">Meters</div>
+      <input type="number" id="meter" class="convertbox" onchange="convertbox('meter','feet')" placeholder="Insert Number"></input>
+    </div>
+    
+    <div>
+        <div class = "unit_title">Kilograms</div>
+      <input type="number" id="kg" class="resultbox" onchange="convertbox('kg','pounds')" placeholder="Insert Number"></input>
+    </div>
+
+    <div>
+        <div class = "unit_title">Pounds</div>
+      <input type="number" id="pounds" class="convertbox" onchange="convertbox('pounds','kg')" placeholder="Insert Number"></input>
+    </div>
+    
+    <div>
+        <div class = "unit_title">Philippine Peso</div>
+      <input type="number" id="php" class="resultbox" onchange="convertbox('php','usd')" placeholder="Insert Number"></input>
+    </div>
+
+    <div>
+        <div class = "unit_title">USD</div>
+      <input type="number" id="usd" class="convertbox" onchange="convertbox('usd','php')" placeholder="Insert Number"></input>
+    </div>
+    
+    </form>
+    <br><br>
+    
+        <script>
+
+        function convertbox(userinput,dest)
+        {
+            var userinputValue = document.getElementById(userinput).value;
+            var dest = document.getElementById(dest);
+
+            if (isNaN(userinputValue)) return;
+
+            if (userinput == "celsius")	dest.value = userinputValue * 9 / 5 + 32 ;
+
+            else if (userinput == "Fahrenheit") dest.value = (userinputValue - 32) * 5 / 9;
+
+            else if (userinput == "inch") dest.value = userinputValue * 2.54;
+
+            else if (userinput == "cm") dest.value = userinputValue / 2.54;
+
+            else if (userinput == "feet") dest.value = userinputValue * 0.3048;
+
+            else if (userinput == "meter") dest.value = userinputValue / 0.3048;
+
+            else if (userinput == "kg") dest.value = userinputValue * 2.20462262;
+
+            else if (userinput == "pounds") dest.value = userinputValue / 2.20462262;
+
+            else if (userinput == "usd") dest.value = userinputValue * 57.35;
+
+            else if (userinput == "php") dest.value = userinputValue / 57.35;
+        }
+        </script>
+ 
+    </body>
+
+</html>
