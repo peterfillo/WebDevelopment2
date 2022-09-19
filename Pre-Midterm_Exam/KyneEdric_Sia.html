@@ -4,10 +4,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #36393f;
+        }
         textarea {
             width: 100%;
             height: 150px;
             resize: none;
+            background-color: #40444b;
+            outline: none;
+            border: none;
+            border-radius: 8px;
+            color: whitesmoke;
+            font-size: 16px;
+        }
+        textarea:focus {
+            outline: none;
+        }
+        textarea::placeholder {
+            color: #72767d;
+        }
+        h3 {
+            color: #dcddde
+        }
+        h1 {
+            color: #dcddde;
+            text-align: center;
         }
         div {
             text-align: center;
@@ -27,6 +50,7 @@
     <title>Pre-Midterm Exam</title>
 </head>
 <body>
+    <h1>Unit Converter</h1>
     <div>
         <h3>Celsius</h3>
         <textarea id="celsius" onchange="convert('celsius', 'farenheit', x => (x * 9.0 / 5.0) + 32.0)" placeholder="Degree Celsius"></textarea>
