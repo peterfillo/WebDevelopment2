@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>WebDev Assignment -Villaceran</title>
+    <title>WebDev PreMid -Villaceran</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta charset="UTF-8">
@@ -87,21 +87,21 @@
     </form>
     <br><br>
     <script>
-        function convertion(got, dest) {
-            var gotNumber = document.getElementById(got).value;
-            var dest = document.getElementById(dest);
-            if (isNaN(gotNumber)) return;
+        function convertion(got, tog) {
+            var gotN = document.getElementById(got).value;
+            var tog = document.getElementById(tog);
+            if (isNaN(gotN)) return;
             if (got == "year");
-            else if (got == "c") dest.value = (gotNumber * 9 / 5 + 32).toFixed(2);
-            else if (got == "f") dest.value = ((gotNumber - 32) * 5 / 9).toFixed(2);
-            else if (got == "inch") dest.value = (gotNumber * 2.54).toFixed(2);
-            else if (got == "cm") dest.value = (gotNumber / 2.54).toFixed(2);
-            else if (got == "ft") dest.value = (gotNumber * 0.3048).toFixed(2);
-            else if (got == "m") dest.value = (gotNumber / 0.3048).toFixed(2);
-            else if (got == "kg") dest.value = (gotNumber * 2.20462262).toFixed(2);
-            else if (got == "pounds") dest.value = (gotNumber / 2.20462262).toFixed(2);
-            else if (got == "usd") dest.value = (gotNumber * 57.35).toFixed(2);
-            else if (got == "php") dest.value = (gotNumber / 57.35).toFixed(2);
+            else if (got == "c") tog.value = (gotN * 9 / 5 + 32).toFixed(2);
+            else if (got == "f") tog.value = ((gotN - 32) * 5 / 9).toFixed(2);
+            else if (got == "inch") tog.value = (gotN * 2.54).toFixed(2);
+            else if (got == "cm") tog.value = (gotN / 2.54).toFixed(2);
+            else if (got == "ft") tog.value = (gotN * 0.3048).toFixed(2);
+            else if (got == "m") tog.value = (gotN / 0.3048).toFixed(2);
+            else if (got == "kg") tog.value = (gotN * 2.2046).toFixed(2);
+            else if (got == "pounds") tog.value = (gotN / 2.2046).toFixed(2);
+            else if (got == "usd") tog.value = (gotN * 57.35).toFixed(2);
+            else if (got == "php") tog.value = (gotN / 57.35).toFixed(2);
 
         }
 
