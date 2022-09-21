@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      div {
+        padding: 20px;
+        border: 1px solid #4CAF50;
+        height: auto;
+        width: 43%;
+      }
+
+      label {
+        display: block;
+        text-align: center;
+        line-height: 150%;
+        font-size: .85em;
+      }
+
+      .Conv1 {
+        float: left;
+        background-color: yellow;
+      }
+
+      .Conv2 {
+        float: right;
+        background-color: green;
+      }
+
+      .Conv3 {
+        float: left;
+        background-color: cyan;
+      }
+
+      .Conv4 {
+        float: right;
+        background-color: orange;
+      }
+
+      .Conv5 {
+        float: left;
+        background-color: red;
+      }
+  </style>
+  </head>
+  <body>
+
+    <div class="Conv1">
+    <label>Fahrenheit</label><br>
+    <input id="Fahrenheit" type="number" placeholder="Fahrenheit" oninput="tempToCelsius(this.value)" onchange="tempToCelsius(this.value)"><br>
+    <label>Celsius</label><br>
+    <input id="Celsius" type="number" placeholder="Celsius" oninput="tempToFarenheit(this.value)" onchange="tempToFarenheit(this.value)">
+    </div>
+    </div>
+
+    <div class="Conv2">
+    <label>Inches</label><br>
+    <input id="Inches" type="number" placeholder="Inches" oninput="toCentimeters(this.value)" onchange="toCentimeters(this.value)"><br>
+    <label>Centimeters</label><br>
+    <input id="Centimeters" type="number" placeholder="Centimeters" oninput="toInches(this.value)" onchange="toInches(this.value)">
+    </div>
+
+    <div class="Conv3">
+    <label>Feet</label><br>
+    <input id="Feet" type="number" placeholder="Feet" oninput="toMeters(this.value)" onchange="toMeters(this.value)"><br>
+    <label>Meters</label><br>
+    <input id="Meters" type="number" placeholder="Meters" oninput="toFeet(this.value)" onchange="toFeet(this.value)">
+    </div>
+
+    <div class="Conv4">
+    <label>Kilograms</label><br>
+    <input id="Kilograms" type="number" placeholder="Kilograms" oninput="toPounds(this.value)" onchange="toPounds(this.value)"><br>
+    <label>Pounds</label><br>
+    <input id="Pounds" type="number" placeholder="Pounds" oninput="toKilograms(this.value)" onchange="toKilograms(this.value)">
+    </div>
+
+    <div class="Conv5">
+    <label>Philippine Pesos</label><br>
+    <input id="Pesos" type="number" placeholder="Pesos" oninput="toUSD(this.value)" onchange="toUSD(this.value)"><br>
+    <label>US Dollars</label><br>
+    <input id="USD" type="number" placeholder="USD" oninput="toPesos(this.value)" onchange="toPesos(this.value)">
+    </div>
+
+    <script>
+    function tempToCelsius(valNum) {
+      valNum = parseFloat(valNum);
+      document.getElementById("Celsius").value=(valNum-32)/1.8;
+    }
+
+    function tempToFarenheit(valNum) {
+      valNum = parseFloat(valNum);
+      document.getElementById("Fahrenheit").value=(valNum*1.8)+32;
+    }
+
+    function toCentimeters(valNum) {
+      valNum = parseFloat(valNum);
+      document.getElementById("Centimeters").value=valNum/0.39370;
+    }
+
+    function toInches(valNum) {
+      valNum = parseFloat(valNum);
+      document.getElementById("Inches").value=valNum*0.39370;
+    }
+
+    function toMeters(valNum) {
+      valNum = parseFloat(valNum);
+      document.getElementById("Meters").value=valNum/3.2808;
+    }
+
+    function toFeet(valNum) {
+      valNum = parseFloat(valNum);
+      document.getElementById("Feet").value=valNum*3.2808;
+    }
+
+    function toPounds(valNum) {
+      valNum = parseFloat(valNum);
+      document.getElementById("Pounds").value=valNum*2.2046;
+    }
+
+    function toKilograms(valNum) {
+      valNum = parseFloat(valNum);
+      document.getElementById("Kilograms").value=valNum/2.2046;
+    }
+
+    function toUSD(valNum) {
+      valNum = parseFloat(valNum);
+      document.getElementById("USD").value=valNum*0.017436791630340016;
+    }
+
+    function toPesos(valNum) {
+      valNum = parseFloat(valNum);
+      document.getElementById("Pesos").value=valNum/0.017436791630340016;
+    }
+    </script>
+  </body>
+</html>

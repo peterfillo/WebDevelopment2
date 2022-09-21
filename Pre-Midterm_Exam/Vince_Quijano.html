@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+<link rel="stylesheet" href="vince_quijano.css">
+</head>
+<body>
+
+    <p>Celcius</p> <input id="Celcius" type="number" placeholder="Degree Celcius" oninput="CecliusFarenheightConverter(this.value)" onchange="CecliusFarenheightConverter(this.value)"></input> 
+    <p>Farenheight:
+    <p style="border-width:1px; border-style:solid; border-color:#000000; padding: 20px; width:300px; height:2px;">
+    <span id ="outputFarenheight"></span>
+    </p>
+</br>
+   <p>Farenheight</p> <input id="Farenheight" type="number" placeholder="Degree Farenheight" oninput="FarenheightCelciusConverter(this.value)" onchange="FarenheightCelciusConverter(this.value)"></input> 
+    <p>Celcius:
+    <p style="border-width:1px; border-style:solid; border-color:#000000; padding: 20px; width:300px; height:2px;">
+    <span id ="outputCelcius"></span>
+</br>
+    <p>Feet</p> <input id="Feet" type="number" placeholder="Feet" oninput="FeetMeters(this.value)" onchange="FeetMeters(this.value)"></input> 
+    <p>Meters:
+    <p style="border-width:1px; border-style:solid; border-color:#000000; padding: 20px; width:300px; height:2px;">
+    <span id ="outputMeters"></span>
+</br>
+    <p>Meters</p> <input id="Meters" type="number" placeholder="Meters" oninput="MetersFeet(this.value)" onchange="MetersFeet(this.value)"></input> 
+    <p>Feet:
+    <p style="border-width:1px; border-style:solid; border-color:#000000; padding: 20px; width:300px; height:2px;">
+    <span id ="outputFeet"></span>
+</br>
+    <p>Kilos</p> <input id="Kilos" type="number" placeholder="Kilos" oninput="KilosPounds(this.value)" onchange="KilosPounds(this.value)"></input> 
+    <p>Pounds:
+    <p style="border-width:1px; border-style:solid; border-color:#000000; padding: 20px; width:300px; height:2px;">
+    <span id ="outputPounds"></span>
+</br>
+    <p>Pounds:</p> <input id="Pounds" type="number" placeholder="Pounds" oninput="PoundsKilos(this.value)" onchange="PoundsKilos(this.value)"></input> 
+    <p>Kilos:
+    <p style="border-width:1px; border-style:solid; border-color:#000000; padding: 20px; width:300px; height:2px;">
+    <span id ="outputKilos"></span>
+</br>
+    <p>Philippine Peso:</p> <input id="Peso" type="number" placeholder="Peso" oninput="PesoDollar(this.value)" onchange="PesoDollar(this.value)"></input> 
+    <p>Dollars:
+    <p style="border-width:1px; border-style:solid; border-color:#000000; padding: 20px; width:300px; height:2px;">
+    <span id ="outputDollar"></span>
+</br>
+    <p>Dollar:</p> <input id="Peso" type="number" placeholder="Dollar" oninput="DollarPeso(this.value)" onchange="DollarPeso(this.value)"></input> 
+    <p>Philippine Peso:
+    <p style="border-width:1px; border-style:solid; border-color:#000000; padding: 20px; width:300px; height:2px;">
+    <span id ="outputPeso"></span>
+</br>
+
+
+
+<script>
+function CecliusFarenheightConverter(valNum){
+    document.getElementById("outputFarenheight").innerHTML=(valNum*1.8)+32;
+}
+function FarenheightCelciusConverter(valNum){
+    document.getElementById("outputCelcius").innerHTML=(valNum-32)*5/9;
+}
+function FeetMeters(valNum){
+    document.getElementById("outputMeters").innerHTML=(valNum/3.281);
+}
+function MetersFeet(valNum){
+    document.getElementById("outputFeet").innerHTML=(valNum*3.281);
+}
+function KilosPounds(valNum){
+    document.getElementById("outputPounds").innerHTML=(valNum*2.205);
+}
+function PoundsKilos(valNum){
+    document.getElementById("outputKilos").innerHTML=(valNum/2.205);
+}
+function PesoDollar(valNum){
+    document.getElementById("outputDollar").innerHTML=(valNum/57.31);
+}
+function DollarPeso(valNum){
+    document.getElementById("outputPeso").innerHTML=(valNum*57.31);
+}
+
+</script>
+</body>
+</html>
+

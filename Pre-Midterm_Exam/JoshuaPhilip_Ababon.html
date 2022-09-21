@@ -28,22 +28,34 @@
     </style>
 
     <script>
-        function converter(src,destination) {
-                var sourceValue = document.getElementById(src).value;
-                var destination = document.getElementById(destination);
+        function converter(src,dst) {
+                var srcValue = document.getElementById(src).value;
+                var dst = document.getElementById(dst);
 
-                if (isNaN(srcValue)) return;
+                if (isNaN(srcValue)){return};
 
-                if (src == "cel")	destination.value = (sourceValue * 9 / 5 + 32).toFixed(2);
-                else if (src == "fah") destination.value = ((sourceValue - 32) * 5 / 9).toFixed(2);
-                else if (src == "inc") destination.value = (sourceValue * 2.54).toFixed(2);
-                else if (src == "cen") destination.value = (sourceValue / 2.54).toFixed(2);
-                else if (src == "fee") destination.value = (sourceValue * 0.3048).toFixed(2);
-                else if (src == "met") destination.value = (sourceValue / 0.3048).toFixed(2);
-                else if (src == "kil") destination.value = (sourceValue * 2.20462262).toFixed;
-                else if (src == "pou") destination.value = (sourceValue / 2.20462262).toFixed(2);
-                else if (src == "php") destination.value = (sourceValue / 57.35).toFixed(2);
-                else if (src == "usd") destination.value = (sourceValue * 57.35).toFixed(2);
+                if (src == "cel"){ 
+                    dst.value = (srcValue * 9 / 5 + 32).toFixed(2);
+                
+                } else if (src == "fah"){ 
+                    dst.value = ((srcValue - 32) * 5 / 9).toFixed(2);
+                } else if (src == "inc"){
+                    dst.value = (srcValue * 2.54).toFixed(2);
+                } else if (src == "cen"){ 
+                    dst.value = (srcValue / 2.54).toFixed(2);
+                } else if (src == "fee"){
+                    dst.value = (srcValue * 0.3048).toFixed(2);
+                } else if (src == "met"){
+                    dst.value = (srcValue / 0.3048).toFixed(2);
+                } else if (src == "kil"){
+                    dst.value = (srcValue * 2.20462262).toFixed(2);
+                } else if (src == "pou"){ 
+                    dst.value = (srcValue / 2.20462262).toFixed(2);
+                } else if (src == "php"){ 
+                    dst.value = (srcValue / 57.35).toFixed(2);
+                } else if (src == "usd"){
+                    dst.value = (srcValue * 57.35).toFixed(2);
+                }
             }
     </script>
 
@@ -52,45 +64,45 @@
     <body>
         <form>
 
-            <div id="divCel">
+            <div>
                <h1>Celcius</h1>
-               <textarea id = "cel" onchange = "converter('cel','fah')"></textarea>
+               <textarea id="cel" onchange="converter('cel','fah')"></textarea>
             </div>
-            <div id="divFah">
+            <div>
                 <h1>Fahrenheit</h1>
-                <textarea id = "fah" onchange = "converter('fah','cel')"></textarea>
+                <textarea id="fah" onchange="converter('fah','cel')"></textarea>
             </div>
-            <div id="divInch">
+            <div>
                 <h1>Inch</h1>
-                <textarea id = "inc" onchange = "converter('inc','cen')"></textarea>
+                <textarea id="inc" onchange="converter('inc','cen')"></textarea>
             </div>
-            <div id="divCent">
+            <div>
                 <h1>Centimeter</h1>
-                <textarea id = "cen" onchange = "convertion('cen','inc')"></textarea>
+                <textarea id="cen" onchange="convertion('cen','inc')"></textarea>
             </div>
-            <div id="divFeet">
+            <div>
                 <h1>Feet</h1>
-                <textarea id = "fee" onchange = "converter('fee','met')"></textarea>
+                <textarea id="fee" onchange="converter('fee','met')"></textarea>
             </div>
-            <div id="divMeter">
+            <div>
                 <h1>Meter</h1>
-                <textarea id = "met" onchange = "converter('met','fee')"></textarea>
+                <textarea id="met" onchange="converter('met','fee')"></textarea>
             </div>
-            <div id="divKilo">
+            <div>
                 <h1>Kilogram</h1>
-                <textarea id = "kil" onchange = "converter('kil','pou')"></textarea>
+                <textarea id="kil" onchange="converter('kil','pou')"></textarea>
             </div>
-            <div id="divPound">
+            <div>
                 <h1>Pound</h1>
-                <textarea id = "pou" onchange = "converter('pou','kil')"></textarea>
+                <textarea id="pou" onchange="converter('pou','kil')"></textarea>
             </div>
-            <div id="divPhpeso">
+            <div>
                 <h1>Phillipine Peso (Php)</h1>
-                <textarea id = "php" onchange = "converter('php','usd')"></textarea>
+                <textarea id="php" onchange="converter('php','usd')"></textarea>
             </div>
-            <div id="divDollar">
+            <div>
                 <h1>US Dollar (USD)</h1>
-                <textarea id = "usd" onchange = "converter('usd','php')" ></textarea>
+                <textarea id="usd" onchange="converter('usd','php')" ></textarea>
             </div>
         </form> 
 
